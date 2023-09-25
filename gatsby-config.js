@@ -8,5 +8,21 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  siteMetadata: {
+    title: "Ibas Majid",
+    description: "I teach JavaScript, React, GraphQL and Gatsby",
+    author: "Ibaslogic",
+  },
+  plugins: [
+    "gatsby-plugin-sass",
+    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+  ],
+  
 }
