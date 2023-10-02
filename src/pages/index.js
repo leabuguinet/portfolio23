@@ -1,13 +1,18 @@
 import React from "react"
 import Layout from "../components/layout"
 import Portrait from "../components/portrait"
+import Window from "../components/window"
+import "../styles/homepage.scss"
 
 const Index = () => {
   return (
     <Layout>
-      <h1>Home page</h1>
-      <h2>hello</h2>
+
+      <main>
       <Portrait></Portrait>
+      <Window></Window>
+      </main>
+
 
     </Layout>
   )
