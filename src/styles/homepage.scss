@@ -1,12 +1,41 @@
+@import 'variables';
+@import 'base';
+
+
+
+
 body {
-
-    background: #f8f8f8;
-
+    background: var(--home-bg);
 }
 
 main {
     display: flex;
+    //flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    height:100vmin;
+    //height:100vmin;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    //flex-direction: column;
+
+    @include max($bp-small-px){
+        flex-direction: column;
+
+        .window-container{
+            order: 3;
+        }
+        
+        .window-container, .portrait-container, .nav-container {
+            width: 100%;
+            height:  fit-content;
+            margin-bottom: 4rem;
+        }
+
+    }
+
+    .portrait-container{
+        padding-top: 2rem;
+    }
+
 }

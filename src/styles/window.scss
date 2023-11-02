@@ -1,9 +1,12 @@
+@import "variables";
+@import "base";
+
+
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
- 
+  margin: 0;
+  padding: 0;
+}
+
 /* body {
 	position: relative;
 	height: 100vh;
@@ -14,47 +17,47 @@
   align-items: center;
 } */
 
-.window-canva {
-    position: relative;
-	height: 100vh;
-	margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.window-container {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //min-width: 60vmin;;
+  //width: 50%;
 }
 
 .top-lamp {
-    position: absolute;
-  width: 0.5vmin;
-  height: 8vmin; 
-  background: black; 
+  z-index: 50;
+  position: absolute;
+  width: clampRem(3, 5, $bp-mobile, $bp-regular);
+  height: clampRem(90, 150, $bp-mobile, $bp-regular);
+  background: var(--darkgrey);
   top: 0;
-  right: 13vmin;
+  right: clampRem(90, 120, $bp-mobile, $bp-regular);
 }
 
-.lamp {
-  position: absolute;
-  width: 10vmin;
-  //background: blue; 
-  top: 8vmin;
-  //border-top-left-radius: 100%;
-  //border-top-right-radius: 100%;
-  border-radius: 10%;
-  right: 6vmin;
 
-  border-bottom: 8vmin solid #333;
-  border-left: 2vmin solid transparent;
-  border-right: 2vmin solid transparent;
+.lamp {
+  z-index: 50;
+  position: absolute;
+  width: clampRem(80, 120, $bp-mobile, $bp-regular);
+  top: clampRem(50, 60, $bp-mobile, $bp-regular);
+  border-radius: 10%;
+  right: clampRem(50, 60, $bp-mobile, $bp-regular);
+  border-bottom: clampRem(50, 100, $bp-mobile, $bp-regular) solid var(--darkgrey);
+  border-left: clampRem(10, 20, $bp-mobile, $bp-regular) solid transparent;
+  border-right: clampRem(10, 20, $bp-mobile, $bp-regular) solid transparent;
   height: 0;
-  //width: 40px;
 }
 
 .wall {
-  width: 60vmin;
-  height: 55vmin;
-  background: #f8f8f8;
-  border-bottom: 0.8vmin solid grey;
-   display: flex;
+  width: clampRem(300, 500, $bp-mobile, $bp-regular);
+  //height: 55vmin;
+  background: var(--home-bg);
+  border-bottom: 4px solid grey;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -67,415 +70,417 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  bottom:0;
+  bottom: 0;
 }
 
 .window-main {
-      width: 35vmin;
-    height: 25vmin;
-    background: #D6EAF8;
-   overflow: hidden;
+  width: clampRem(150, 320, $bp-mobile, $bp-regular);
+  height: clampRem(200, 235, $bp-mobile, $bp-regular);
+  background: #d6eaf8;
+  overflow: hidden;
 }
 
 .window-top {
-    width: 35vmin;
-    height: 30vmin;
-    background: #D6EAF8;
-    border-top-left-radius: 100%;
-   border-top-right-radius: 100%;
+  width: clampRem(150, 320, $bp-mobile, $bp-regular);
+  height: clampRem(85, 265, $bp-mobile, $bp-regular);
+  background: #d6eaf8;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
   overflow: hidden;
 }
 
 .innerline-center {
   position: absolute;
-  height: 55vmin;
-  width: 0.2vmin;
-  background-color: #AAA;
-  
+  height: clampRem(290, 520, $bp-mobile, $bp-regular);;
+  width: 2px;
+  background-color: #aaa;
 }
 
-.innerline-hor1, .innerline-hor2, .innerline-hor3, {
-    position: absolute;
-    height: 0.2vmin;
-    width: 35vmin;
-    background-color: #AAA;
+.innerline-hor1,
+.innerline-hor2,
+.innerline-hor3,
+  {
+  position: absolute;
+  height: 2px;
+  width: clampRem(150, 320, $bp-mobile, $bp-regular);;
+  background-color: #aaa;
 }
 
 .innerline-hor1 {
-  top: 16vmin;
+  bottom: clampRem(200, 350, $bp-mobile, $bp-regular);
 }
-  
+
 .innerline-hor2 {
-  top: 29vmin;
+  bottom: clampRem(135, 230, $bp-mobile, $bp-regular);
 }
 
 .innerline-hor3 {
-  top: 43vmin;
+  bottom: clampRem(65, 110, $bp-mobile, $bp-regular);
 }
 
 .clouds {
-  width: 12vmin;
-  height: 8vmin;
-  //background: linear-gradient(to bottom, #fff 50%,    transparent 50%);
+  width: clampRem(45, 90, $bp-mobile, $bp-regular);
+  height: clampRem(30, 60, $bp-mobile, $bp-regular);
   background-color: white;
-  position: absolute; 
+  position: absolute;
   border-radius: 100%;
-  box-shadow: 6vmin 2vmin 0 -2vmin white, -5vmin 1vmin 0 -1vmin white, ;
-
 }
 
 .cloud1 {
-    box-shadow: 6vmin 2vmin 0 -2vmin white, -5vmin 1vmin 0 -1vmin white, ;
+  box-shadow: clampRem(25, 40, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -10, $bp-mobile, $bp-regular) white, 
+  clampRem(-20, -50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -8, $bp-mobile, $bp-regular) white;
+  top: clampRem(140, 280, $bp-mobile, $bp-regular);
+
 }
 
 .cloud2 {
-  width: 10vmin;
-  height: 6vmin;
-    box-shadow: 5vmin 2vmin 0 -1vmin white, -5vmin 1vmin 0 -1vmin white, ;
-  top: 15vmin;
-  left: 18vmin;
+  width: clampRem(50, 100, $bp-mobile, $bp-regular);
+  height: clampRem(25, 50, $bp-mobile, $bp-regular);
+  box-shadow: clampRem(30, 50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -12, $bp-mobile, $bp-regular) white, 
+  clampRem(-35, -35, $bp-mobile, $bp-regular) clampRem(2, 15, $bp-mobile, $bp-regular) 0 clampRem(-3, -5, $bp-mobile, $bp-regular) rgb(255, 255, 255);
+  top: clampRem(35, 60, $bp-mobile, $bp-regular);
+  left: clampRem(80, 160, $bp-mobile, $bp-regular);
 }
-
 
 /// PLANTS
 
 .plant1 {
   position: absolute;
   bottom: 0;
-  left: 45vmin;
+  left: clampRem(210, 370, $bp-mobile, $bp-regular);
 
-
-.pot1{
-  width: 10vmin;
-  height: 5vmin;
-  position: absolute;
-  bottom: 0;
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 19% 100%);
-      background: linear-gradient(to bottom, #000 5%, orange 10%);
+  .pot1 {
+    width: clampRem(45, 80, $bp-mobile, $bp-regular);
+    height: clampRem(20, 40, $bp-mobile, $bp-regular);
+    position: absolute;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 19% 100%);
+    background: linear-gradient(to bottom, #000 5%, orange 10%);
     border-radius: 10%;
-  z-index: 10; 
-}
-
-.anim1, .anim2, .anim3, .anim4, .anim5 {
-  position: absolute;
-  width: 10vmin;
-  height: 25vmin;
-  bottom: -1vmin;
-  transform-origin: bottom;
-}
-
-
-
-
-.branch {
-  width: 3vmin;
-  background: transparent;
-  position: absolute;
-  border-radius: 100%;
-  border: none;
-  border-right: 0.3vmin solid darkgreen;
-  bottom: 1vmin;
-  z-index: 9;
-}
-
-
-.leaf {
-  width: 7vmin;
-  background: green;
-  position: absolute;
-  border-radius: 5% 85%;
-  border: none;
-  border-right: 0.5vmin solid darkgreen;
-  top: 0;
-  z-index: 6;
-}
-
-.branch1 {
-  left: 2.5vmin;
-  height: 24vmin;
-  z-index: 7;
-}
-
-.leaf1 {
-  left: 0.5vmin;
-  height: 8vmin;
-  top: -3vmin;
-  transform:  rotate(28deg);
-  z-index: 6;
-}
-
-.branch2 {
-  height: 15vmin;
-  left: 6vmin;
-  border: none;
-  border-left: 0.3vmin solid darkgreen;
-}
-
-.leaf2 {
-  height: 8vmin;
-  top: 4vmin;
-  transform: rotate(58deg);
-  left: 4.5vmin;
-  z-index: 8;
-}
-
-.branch3 {
-  left: 6.8vmin;
-  height: 10vmin;
-  border: none;
-  border-left: 0.3vmin solid darkgreen;
-  transform: rotate(10deg);
-}
-
-
-.leaf3 {
-  height: 3.5vmin;
-  top: 12vmin;
-  transform: rotate(95deg);
-  left: 5.5vmin;
-  z-index: 8;
-}
-
-.branch4 {
-  height: 18vmin;
-  left: 1vmin;
-}
-
-.leaf4 {
-  height: 3.5vmin;
-  width: 6vmin;
-  top: 5vmin;
-  transform: rotate(40deg);
-  left: -0.5vmin;
-  z-index: 8;
-}
-
-.branch5 {
-  left: -0vmin;
-  height: 12vmin;
-  transform: rotate(-10deg);
-}
-
-.leaf5 {
-  height: 5vmin;
-  width: 6vmin;
-  top: 10vmin;
-  transform: rotate(30deg);
-  left: -2vmin;
-  z-index: 8;
-}
-
-
-@keyframes swing-1 {
-  100% {
-    transform: rotate(2deg);
+    z-index: 10;
   }
-}
 
-@keyframes swing-2 {
-  100% {
-    transform: rotate(3deg);
+  .anim1,
+  .anim2,
+  .anim3,
+  .anim4,
+  .anim5 {
+    position: absolute;
+    width: clampRem(45, 80, $bp-mobile, $bp-regular);
+    height: clampRem(130, 190, $bp-mobile, $bp-regular);
+    bottom: -0;
+    transform-origin: bottom;
   }
-}
 
-@keyframes swing-3 {
-  100% {
-    transform: rotate(2deg);
+  .branch {
+    width: clampRem(10, 23, $bp-mobile, $bp-regular);
+    background: transparent;
+    position: absolute;
+    border-radius: 100%;
+    border: none;
+    border-right: 2px solid darkgreen;
+    bottom: 1vmin;
+    z-index: 9;
   }
-}
 
-.anim1 {
-   animation: swing-1 ease-in-out 4s infinite alternate;
-}
+  .leaf {
+    width: clampRem(40, 53, $bp-mobile, $bp-regular);
+    background: green;
+    position: absolute;
+    border-radius: 5% 85%;
+    border: none;
+    border-right: 3px solid darkgreen;
+    top: 0;
+    z-index: 6;
+  }
 
-.anim2, .anim4, .anim5 {
-  animation: swing-2 ease-in-out 5s infinite alternate;
-}
+  .branch1 {
+    left: clampRem(10, 18, $bp-mobile, $bp-regular);
+    height: clampRem(107, 170, $bp-mobile, $bp-regular);
+    z-index: 7;
+  }
 
-.anim3 {
-  animation: swing-3 ease-in-out 5s infinite alternate;
-}
-  
+  .leaf1 {
+    left: clampRem(-10, 5, $bp-mobile, $bp-regular);
+    height: clampRem(35, 60, $bp-mobile, $bp-regular);
+    top: clampRem(0, -30, $bp-mobile, $bp-regular);
+    transform: rotate(28deg);
+    z-index: 6;
+  }
+
+  .branch2 {
+    left: clampRem(25, 45, $bp-mobile, $bp-regular);
+    height: clampRem(80, 120, $bp-mobile, $bp-regular);
+    border: none;
+    border-left: 2px solid darkgreen;
+  }
+
+  .leaf2 {
+    left: clampRem(10, 33, $bp-mobile, $bp-regular);
+    height: clampRem(35, 62, $bp-mobile, $bp-regular);
+    top: clampRem(30, 20, $bp-mobile, $bp-regular);
+    transform: rotate(58deg);
+    z-index: 8;
+  }
+
+  .branch3 {
+    left: clampRem(30, 50, $bp-mobile, $bp-regular);
+    height: clampRem(55, 75, $bp-mobile, $bp-regular);
+    border: none;
+    border-left: 2px solid darkgreen;
+    transform: rotate(10deg);
+  }
+
+  .leaf3 {
+    left: clampRem(22, 42, $bp-mobile, $bp-regular);
+    height: clampRem(18, 30, $bp-mobile, $bp-regular);
+    top: clampRem(65, 95, $bp-mobile, $bp-regular);
+    transform: rotate(95deg);
+    z-index: 8;
+  }
+
+  .branch4 {
+    right: clampRem(32, 48, $bp-mobile, $bp-regular);
+    height: clampRem(70, 120, $bp-mobile, $bp-regular);
+  }
+
+  .leaf4 {
+    left: clampRem(-6, -3, $bp-mobile, $bp-regular);
+    height: clampRem(30, 30, $bp-mobile, $bp-regular);
+    top: clampRem(35, 40, $bp-mobile, $bp-regular);
+    width: clampRem(25, 40, $bp-mobile, $bp-regular);
+    transform: rotate(25deg);
+    z-index: 8;
+  }
+
+  .branch5 {
+    right: clampRem(35, 55, $bp-mobile, $bp-regular);
+    height: clampRem(45, 80, $bp-mobile, $bp-regular);
+    transform: rotate(-10deg);
+  }
+
+  .leaf5 {
+    left: clampRem(-25, -15, $bp-mobile, $bp-regular);
+    height: clampRem(20, 35, $bp-mobile, $bp-regular);
+    top: clampRem(65, 75, $bp-mobile, $bp-regular);
+    width: clampRem(40, 45, $bp-mobile, $bp-regular);
+    transform: rotate(30deg);
+    z-index: 8;
+  }
+
+  @keyframes swing-1 {
+    100% {
+      transform: rotate(2deg);
+    }
+  }
+
+  @keyframes swing-2 {
+    100% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes swing-3 {
+    100% {
+      transform: rotate(2deg);
+    }
+  }
+
+  .anim1 {
+    animation: swing-1 ease-in-out 4s infinite alternate;
+  }
+
+  .anim2,
+  .anim4,
+  .anim5 {
+    animation: swing-2 ease-in-out 5s infinite alternate;
+  }
+
+  .anim3 {
+    animation: swing-3 ease-in-out 5s infinite alternate;
+  }
 }
 
 .plant2 {
   position: absolute;
   bottom: 0;
-  left: 44vmin;
-  
-  .pot2{
-  width: 4.5vmin;
-  height: 3vmin;
-  position: absolute;
-  bottom: 0;
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 19% 100%);
-      background: linear-gradient(to bottom, #000 5%, #614d4f 10%);
+  left: clampRem(205, 350, $bp-mobile, $bp-regular);
+
+  .pot2 {
+    width: clampRem(20, 40, $bp-mobile, $bp-regular);
+    height: clampRem(15, 30, $bp-mobile, $bp-regular);
+    position: absolute;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 19% 100%);
+    background: linear-gradient(to bottom, #000 5%, #614d4f 10%);
     border-radius: 10%;
-  z-index: 15; 
+    z-index: 15;
   }
 
-  
   .branch {
-    width: 0.1vmin;
-    height: 8vmin; 
+    width: clampRem(1, 2, $bp-mobile, $bp-regular);
+    height: clampRem(20, 30, $bp-mobile, $bp-regular);
     background: darkgreen;
-    top: -6.5vmin;
+    //top: 10px;
     position: absolute;
-     z-index: 14;
+    z-index: 14;
   }
-  
+
   .branch1 {
-        height: 8vmin; 
-        left: 3vmin;
-        top: -8.5vmin;
+    height: clampRem(30, 60, $bp-mobile, $bp-regular);
+    left: clampRem(10, 28, $bp-mobile, $bp-regular);
+    bottom: 10px;
   }
-  
+
   .flower {
-    	border-radius: 100%;
-      position: absolute;
-      z-index: 26;
-      background-color: #faaa18;
-      height: 1.5vmin;
-      width: 1.5vmin;
+    border-radius: 100%;
+    //position: absolute;
+    z-index: 26;
+    background-color: #faaa18;
+    height: clampRem(7, 10, $bp-mobile, $bp-regular);
+    width: clampRem(7, 10, $bp-mobile, $bp-regular);
     animation: flowerRotation 20s linear infinite;
   }
-  
-  .flower1 {
-  left: 2.2vmin;
-  top: -10vmin;
-	background-color: #faaa18;
-	box-shadow: 1vmin -0.2vmin #ffe000,
-				      -0.5vmin 0.8vmin #ffe000,
-				      -1vmin -0.2vmin #ffe000,
-              0vmin -1vmin #ffe000,
-              0.8vmin 0.8vmin #ffe000;
-}
-  
-  .branch2 {
-    height: 5vmin; 
-    left: 1vmin;
-    top: -5.5vmin;
-  }
-  
-  .flower2 {
-      left: 0.2vmin;
-  top: -7vmin;
-	background: #e9ce93;
-;
-	box-shadow:  1vmin -0.2vmin #a0275d, 
-				      -0.5vmin 0.8vmin #6c0d38,
-				      -1vmin -0.2vmin #a0275d,
-              0vmin -1vmin #6c0d38,
-              0.8vmin 0.8vmin #6c0d38;
-  }
-  
-  .leaf {
-       position: absolute;
-        z-index: 14;
-    	border-radius: 100% 0 / 100% 0px;
-    	background-image: linear-gradient(to top left, #4c970e 50%, transparent 50%, transparent 50%, #33650a 50%);
-  }
-  
-  .leaf1 {
-	width: 2vmin;
-	height: 2vmin;
-	transform: rotate(0deg);
-  top: -6vmin;
-   left: 3vmin;
-	//transform-origin: 0 140px;
-	//animation: wind1 5.8s ease-in-out infinite;
-   animation: wind1 5.8s ease-in-out infinite;
 
+  .flower1 {
+    position: relative;
+    left: clampRem(7, 23, $bp-mobile, $bp-regular);
+    bottom: clampRem(35, 55, $bp-mobile, $bp-regular);
+    background-color: #faaa18;
+    /* box-shadow: 1vmin -0.2vmin #ffe000, -0.5vmin 0.8vmin #ffe000,
+      -1vmin -0.2vmin #ffe000, 0vmin -1vmin #ffe000, 0.8vmin 0.8vmin #ffe000; */
+      box-shadow: -5px -1px #ffe000, 5px -1px #ffe000,
+      0px -5px #ffe000, -3px 5px #ffe000, 3px 5px #ffe000;
   }
-  
-  .leaf2 {
-    	width: 1.2vmin;
-	    height: 1.2vmin;
-      top: -4vmin;
-      left: 1vmin;
+
+  .branch2 {
+    height: clampRem(15, 40, $bp-mobile, $bp-regular);
+    left: clampRem(3, 10, $bp-mobile, $bp-regular);
+    bottom: 10px;
+  }
+
+  .flower2 {
+    position: relative;
+    left: clampRem(0, 4, $bp-mobile, $bp-regular);
+    bottom: clampRem(25, 45, $bp-mobile, $bp-regular);
+    background: #e9ce93;
+    box-shadow: -5px -1px #a84a67, 5px -1px #ce6787,
+    0px -5px #a84a67, -3px 5px #ce6787, 3px 5px #a84a67;
+    transform-style: preserve-3d;
+  }
+
+  .leaf {
+    position: absolute;
+    z-index: 14;
+    border-radius: 100% 0 / 100% 0px;
+    background-image: linear-gradient(
+      to top left,
+      #4c970e 50%,
+      transparent 50%,
+      transparent 50%,
+      #33650a 50%
+    );
+  }
+
+  .leaf1 {
+    width: clampRem(10, 15, $bp-mobile, $bp-regular);
+    height: clampRem(10, 15, $bp-mobile, $bp-regular);
     transform: rotate(0deg);
+    bottom: clampRem(25, 45, $bp-mobile, $bp-regular);
+    left: clampRem(10, 28, $bp-mobile, $bp-regular);
+    //transform-origin: 0 140px;
+    //animation: wind1 5.8s ease-in-out infinite;
+    animation: wind1 5.8s ease-in-out infinite;
   }
-  
-    .leaf3 {
-    	width: 1.2vmin;
-	    height: 1.2vmin;
-      top: -4vmin;
-      left: 0vmin;
+
+  .leaf2 {
+    width: clampRem(5, 12, $bp-mobile, $bp-regular);
+    height: clampRem(5, 12, $bp-mobile, $bp-regular);
+    transform: rotate(0deg);
+    bottom: clampRem(15, 25, $bp-mobile, $bp-regular);
+    left: clampRem(3, 8, $bp-mobile, $bp-regular);
+    transform: rotate(4deg);
+  }
+
+  .leaf3 {
+    width: clampRem(5, 12, $bp-mobile, $bp-regular);
+    height: clampRem(5, 12, $bp-mobile, $bp-regular);
+    transform: rotate(0deg);
+    bottom: clampRem(15, 25, $bp-mobile, $bp-regular);
+    left: clampRem(-1, 0, $bp-mobile, $bp-regular);
     transform: rotate(90deg);
   }
-  
-  @keyframes wind1 {
-	0% {
-		transform:  rotate(0deg);
-	}
-	50% {
-		transform: rotate(-5deg);
-	}
-	100% {
-		transform:  rotate(0deg);
-	}
-}
 
+  @keyframes wind1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 }
 
 @keyframes flowerRotation {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .plant3 {
-  
-    .pot3{
-  width: 3.5vmin;
-  height: 2vmin;
+
   position: absolute;
   bottom: 0;
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 19% 100%);
-      background: linear-gradient(to bottom, #000 5%, #f1b9df 10%);
+  left: clampRem(260, 460, $bp-mobile, $bp-regular);
+
+  .pot3 {
+    width: clampRem(15, 25, $bp-mobile, $bp-regular);
+    height: clampRem(10, 15, $bp-mobile, $bp-regular);
+    position: absolute;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 19% 100%);
+    background: linear-gradient(to bottom, #000 5%, #f1b9df 10%);
     border-radius: 10%;
-  z-index: 15; 
-      right: 2vmin;
+    z-index: 15;
   }
-  
+
   .cactus {
     position: absolute;
-    bottom: 2vmin;
-    right: 2.8vmin;
-    width: 2vmin;
-    height: 4vmin;
-    background: repeating-linear-gradient(90deg, rgba(0,120,16,1), rgba(0,120,16,1), rgba(74,177,77,1), rgba(74,177,77,1), rgba(0,120,16,1), rgba(0,120,16,1), rgba(74,177,77,1), rgba(74,177,77,1) 70%);
-    
-   z-index: 10;
+    bottom: clampRem(10, 10, $bp-mobile, $bp-regular);
+    left: clampRem(3, 5, $bp-mobile, $bp-regular);
+    width: clampRem(8, 12, $bp-mobile, $bp-regular);
+    height: clampRem(12, 25, $bp-mobile, $bp-regular);
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(0, 120, 16, 1),
+      rgba(0, 120, 16, 1),
+      rgba(74, 177, 77, 1),
+      rgba(74, 177, 77, 1),
+      rgba(0, 120, 16, 1),
+      rgba(0, 120, 16, 1),
+      rgba(74, 177, 77, 1),
+      rgba(74, 177, 77, 1) 70%
+    );
+
+    z-index: 10;
     border-radius: 30% 30% 0 0;
-}
-  
+  }
+
   .cactus-arm {
     position: absolute;
-    bottom: 2.8vmin;
-    right: 1.6vmin;
-    width: 1vmin;
-    height: 1vmin;
+    bottom: clampRem(10, 18, $bp-mobile, $bp-regular);
+    left: clampRem(9, 15, $bp-mobile, $bp-regular);
+    width: clampRem(7, 11, $bp-mobile, $bp-regular);
+    height: clampRem(8, 12, $bp-mobile, $bp-regular);
     border-radius: 0 40% 80% 0;
-    border-right: 1vmin solid green;
-    border-bottom: 1.2vmin solid green;
+    border-right: clampRem(3, 6, $bp-mobile, $bp-regular) solid green;
+    border-bottom: clampRem(3, 6, $bp-mobile, $bp-regular) solid green;
     z-index: 9;
+  }
 }
-
-/*.cactus-arm {
-    content:  "";
-    position: absolute;
-    border-radius: 50%;
-    width: 3vmin;
-    height: 3vmin;
-    background: blue;
-    top: 2vmin;
-    right: 5vmin;
-  z-index: 20;
-}*/
-  
-}
-

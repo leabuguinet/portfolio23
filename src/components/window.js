@@ -4,8 +4,7 @@ import "../styles/window.scss";
 const Window = () => {
   return (
     <>
-
-        <div className="window-canva">
+        <div className="window-container">
         <div className="top-lamp"></div>
       <div className="lamp"></div>          
       <div className="wall">

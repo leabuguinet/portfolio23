@@ -1,226 +1,251 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  body {
-  
-      --black: #00202a;
-    --white: #f8f8f8;
-    --blue: #ffd700;
-    --skin: #f19682;
-    --dark-skin: #cc3c40;
-    --light-skin: #f3af9f;
-    --yellow: #f6d359;
-    --dark-yellow: #e9a964;
-  }
-  
-/*  
-.canva {
-    background: #d8beb8;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
+@import "variables";
+@import "base";
+
+.portrait-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10%;
+
+  @include max($bp-small-px) {
+    gap: 10px;
     align-items: center;
+    flex-direction: row-reverse;
     justify-content: center;
-    position: relative;
-    z-index: 0;
-    }
-   */
-  .circle {
-    width: 30vmin;
-    //max-width: 400px;
-    height: 30vmin;
-    //max-height: 400px;
-    background: #ffffff;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  @include max($bp-mobile-px) {
     flex-direction: column;
-    position: relative;
-    z-index: -15;
-    overflow: hidden;
-    border: 2vmin rgb(82, 46, 62) solid;
+    gap: 20px;
   }
-  
-  .head {
-    position: relative;
-    width: 15vmin;
-    //max-width: 200px;
-    height: 15vmin;
-    //max-height: 200px;
-    background: 
-      linear-gradient(100deg, var(--skin) 45%, transparent calc(25% + 1px)),
-          linear-gradient(0deg, var(--light-skin) 45%, transparent calc(35% + 1px)),
-          linear-gradient(75deg, var(--skin) 55%, transparent calc(35% + 1px)),
-          
-              /* skin */
-              var(--light-skin);
-    border-radius: 100%;
-    z-index: 10;
-    
-        box-shadow:
-              /* ear */
-              -6vmin -0.5vmin 0 -5vmin var(--dark-skin),
-  }
-  
-  
-  
-  
-  
-  .eyes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  .left-eye, .right-eye {
-    width: 1vmin;
-    height: 1vmin; 
-    background-color: black;
-    border-radius: 100%;
-    margin-bottom: 4vmin;
-    position : relative;
-  }
-  
-  .left-eye {
-    margin-right: 5vmin;
-  }
-  
-  .left-eye::before, .right-eye::before {
-    content: "";
-    position: absolute;
-    width: 2vmin; 
-    height: 0.5vmin; 
-    background: black;
-    top: -1vmin;
-    
-  }
-  
-  .left-eye::before {
-    border-top-left-radius: 100%;
-    left: -1vmin;
-  }
-  
-  .right-eye::before {
-    border-top-right-radius: 100%;
-  }
-  
-  .left-eye::after, .right-eye::after {
-    content: "";
-    position: absolute;
-    width: 1vmin;
-    height: 1vmin;
-    border-radius: 100%; 
-    background-color: pink;
-    top: 2vmin;
-  }
-  
-  .left-eye::after {
-    left: -2.5vmin;
-  }
-  
-  .right-eye::after {
-    left: 2.5vmin;
-  }
-  
-  
-  /* glasses */
+}
 
-  .eyes::before, .eyes::after {
-    top: 2vmin;
-    width: 7vmin; 
-    height: 7vmin;
+.name {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-variation-settings: "wght" 300;
+  letter-spacing: -2px;
+  @include max($bp-small-px) {
+    text-align: center;
   }
 
-  .eyes::after {
-    content: "";
-    position: absolute;
-    left: -0.5vmin;
-    border: 2px solid var(--blue);
-    border-radius: 50%;
+  h1 {
+    font-size: clampRem(28, 45, $bp-mobile, $bp-regular);
+    font-variation-settings: "wght" 500;
   }
-  
-  .eyes::before {
-    content: "";
-    position: absolute;
-    left: 9vmin;
-    border: 2px solid var(--blue);
-    border-radius: 50%;
+
+  h2 {
+    font-size: clampRem(28, 40, $bp-mobile, $bp-regular);
   }
-  
-  
-  .smile {
-    width: 3.5vmin;
-    height: 3vmin;
-    background: transparent;
-    border-radius: 100%;
-    border-bottom: 0.5vmin solid var(--dark-skin);
-    transform: rotate(10deg);
-    position: absolute;
-    top: 9vmin;
-    left: 5vmin;
-  }
-  
-  
-  .head::before {
-    content: "";
-    position: absolute;
-      top: -3vmin; left: 1vmin;
-      width: 15vmin; height: 6vmin;
-      border-radius: 60% 60%  10%  100%  / 60% 100% 10% 60%;
-    background-color: #250802;
-      //box-shadow: inset 120px 0 0 -50px var(--yellow);
-  }
-  
-  .head::after{
-     content: "";
-    position: absolute;
-    width: 3.5vmin; height: 3.5vmin;
-    border-radius: 100%;
-      top: -1vmin; left: -0.5vmin;
-    background-color: #250802;
-    z-index: -10;
-  }
-  
-  .backhead-hair {
-    position : absolute;
-    top: 8.5vmin;
-    z-index: -5;
-    width: 16vmin;
-    height: 17.5vmin;
-    background: #250802;
-    border-radius: 10%;
-  }
-  
-  
-  .neck {
-    position : absolute;
-    top: 22vmin;
-    z-index: -4;
-    width: 4vmin;
-    height: 4vmin;
-    background:
-      linear-gradient(115deg, var(--skin) 55%, transparent calc(25% + 1px)),
-              /* skin */
-              var(--light-skin);
-    border-radius: 10%;
-  }
-  
-  .body {
-    position: absolute;
-     top: 24vmin;
-    z-index: -5;
-    width: 11vmin;
-    height: 9vmin;
-    background-position: contain;
-    background: repeating-linear-gradient(0deg, rgba(2,0,36,1), rgba(2,0,36,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(2,0,36,1), rgba(2,0,36,1) 10%);
-    border-radius: 50% 50% 0 0;
-    
-  }
+}
+
+.circle {
+  width: clampRem(150, 300, $bp-mobile, $bp-regular);
+  height: clampRem(150, 300, $bp-mobile, $bp-regular);
+  min-width: clampRem(150, 300, $bp-mobile, $bp-regular);
+  min-height: clampRem(150, 300, $bp-mobile, $bp-regular);
+  background: #ffffff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: -15;
+  overflow: hidden;
+  border: 5px rgb(46, 82, 54) solid;
+}
+
+.head {
+  position: relative;
+  width: clampRem(75, 140, $bp-mobile, $bp-regular);
+  height: clampRem(75, 140, $bp-mobile, $bp-regular);
+  background: linear-gradient(
+      100deg,
+      var(--skin) 45%,
+      transparent calc(25% + 1px)
+    ),
+    linear-gradient(0deg, var(--light-skin) 45%, transparent calc(35% + 1px)),
+    linear-gradient(75deg, var(--skin) 55%, transparent calc(35% + 1px)),
+    /* skin */ var(--light-skin);
+  border-radius: 100%;
+  z-index: 10;
+}
+
+.ear {
+  position: absolute;
+  width: clampRem(20, 40, $bp-mobile, $bp-regular);
+  height: clampRem(20, 40, $bp-mobile, $bp-regular);
+  background-color: var(--dark-skin);
+  border-radius: 100%;
+  bottom: clampRem(55, 130, $bp-mobile, $bp-regular);
+  z-index: -1;
+  left: clampRem(25, 65, $bp-mobile, $bp-regular);
+}
+
+.eyes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.left-eye,
+.right-eye {
+  width: clampRem(5, 10, $bp-mobile, $bp-regular);
+  height: clampRem(5, 10, $bp-mobile, $bp-regular);
+  background-color: black;
+  border-radius: 100%;
+  margin-bottom: clampRem(5, 30, $bp-mobile, $bp-regular);
+  position: relative;
+}
+
+.left-eye {
+  margin-right: clampRem(20, 50, $bp-mobile, $bp-regular);
+}
+
+.left-eye::before,
+.right-eye::before {
+  content: "";
+  position: absolute;
+  width: clampRem(8, 18, $bp-mobile, $bp-regular);
+  height: clampRem(2, 4, $bp-mobile, $bp-regular);
+  background: black;
+  bottom: clampRem(8, 15, $bp-mobile, $bp-regular);
+}
+
+.left-eye::before {
+  border-top-left-radius: 100%;
+  left: clampRem(-2, -5, $bp-mobile, $bp-regular);
+}
+
+.right-eye::before {
+  border-top-right-radius: 100%;
+}
+
+.left-eye::after,
+.right-eye::after {
+  content: "";
+  position: absolute;
+  width: clampRem(5, 10, $bp-mobile, $bp-regular);
+  height: clampRem(5, 10, $bp-mobile, $bp-regular);
+  border-radius: 100%;
+  background-color: pink;
+  top: clampRem(10, 20, $bp-mobile, $bp-regular);
+}
+
+.left-eye::after {
+  right: clampRem(15, 20, $bp-mobile, $bp-regular);
+}
+
+.right-eye::after {
+  left: clampRem(15, 30, $bp-mobile, $bp-regular);
+}
+
+/* glasses */
+
+.eyes::before,
+.eyes::after {
+  top: clampRem(15, 25, $bp-mobile, $bp-regular);
+  width: clampRem(35, 60, $bp-mobile, $bp-regular);
+  height: clampRem(35, 60, $bp-mobile, $bp-regular);
+}
+
+.eyes::after {
+  content: "";
+  position: absolute;
+  left: clampRem(0, -10, $bp-mobile, $bp-regular);
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.eyes::before {
+  content: "";
+  position: absolute;
+  left: clampRem(40, 85, $bp-mobile, $bp-regular);
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.smile {
+  width: clampRem(15, 30, $bp-mobile, $bp-regular);
+  height: clampRem(15, 30, $bp-mobile, $bp-regular);
+  background: transparent;
+  border-radius: 100%;
+  border-bottom: 0.5vmin solid var(--dark-skin);
+  transform: rotate(10deg);
+  position: absolute;
+  top: clampRem(50, 85, $bp-mobile, $bp-regular);
+  left: clampRem(20, 40, $bp-mobile, $bp-regular);
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  bottom: clampRem(50, 105, $bp-mobile, $bp-regular);
+  left: clampRem(5, 0, $bp-mobile, $bp-regular);
+  width: clampRem(75, 145, $bp-mobile, $bp-regular);
+  height: clampRem(35, 60, $bp-mobile, $bp-regular);
+  border-radius: 60% 60% 10% 100% / 60% 100% 10% 60%;
+  background-color: #250802;
+  //box-shadow: inset 120px 0 0 -50px var(--yellow);
+}
+
+.head::after {
+  content: "";
+  position: absolute;
+  width: clampRem(20, 40, $bp-mobile, $bp-regular);
+  height: clampRem(20, 40, $bp-mobile, $bp-regular);
+  border-radius: 100%;
+  bottom: clampRem(55, 110, $bp-mobile, $bp-regular);
+  right: clampRem(60, 105, $bp-mobile, $bp-regular);
+  background-color: #250802;
+  z-index: -10;
+}
+
+.backhead-hair {
+  position: absolute;
+  top: clampRem(40, 70, $bp-mobile, $bp-regular);
+  z-index: -5;
+  width: clampRem(80, 140, $bp-mobile, $bp-regular);
+  height: clampRem(85, 180, $bp-mobile, $bp-regular);
+  background: #250802;
+  border-radius: 10%;
+}
+
+.neck {
+  position: absolute;
+  top: clampRem(100, 200, $bp-mobile, $bp-regular);
+  z-index: -4;
+  width: clampRem(20, 30, $bp-mobile, $bp-regular);
+  height: clampRem(20, 40, $bp-mobile, $bp-regular);
+  background: linear-gradient(
+      115deg,
+      var(--skin) 55%,
+      transparent calc(25% + 1px)
+    ),
+    /* skin */ var(--light-skin);
+  border-radius: 10%;
+}
+
+.body {
+  position: absolute;
+  top: clampRem(110, 220, $bp-mobile, $bp-regular);
+  z-index: -5;
+  width: clampRem(70, 120, $bp-mobile, $bp-regular);
+  height: clampRem(50, 100, $bp-mobile, $bp-regular);
+  background-position: contain;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1),
+    rgba(2, 0, 36, 1),
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 1),
+    rgba(2, 0, 36, 1),
+    rgba(2, 0, 36, 1) 10%
+  );
+  border-radius: 50% 50% 0 0;
+}
