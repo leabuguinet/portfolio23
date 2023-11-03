@@ -9,13 +9,20 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "Ibas Majid",
-    description: "I teach JavaScript, React, GraphQL and Gatsby",
-    author: "Ibaslogic",
+    title: "Léa Buguinet",
+    description: "Développeuse web Front-End",
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -26,3 +33,4 @@ module.exports = {
   ],
   
 }
+

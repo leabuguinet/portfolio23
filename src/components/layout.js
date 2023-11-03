@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./header"
+import Footer from "./footer"
 //import "../styles/style.scss"
 
 const Layout = props => {
@@ -7,6 +8,7 @@ const Layout = props => {
     <>
       {/* <Header /> */}
       {props.children}
+      <Footer />
     </>
   )
 }
