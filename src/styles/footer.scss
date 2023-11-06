@@ -6,10 +6,25 @@ footer {
         display: flex;
         align-items: center;
         align-content: center;
+        justify-content: center;
+        gap: clampRem(10,20, $bp-mobile, $bp-regular);
+        fill: var(--darkgrey);
 
         a svg {
-            width: clampRem(25, 150, $bp-mobile, $bp-regular);
-            height: clampRem(25, 150, $bp-mobile, $bp-regular);
+            width: clampRem(30,80, $bp-mobile, $bp-regular);
+            height: clampRem(30, 80, $bp-mobile, $bp-regular);
+            
+            
         }
+
+        a {
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            fill: #5cce7e;
+        }
+
+        
     }
 }
