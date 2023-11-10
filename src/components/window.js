@@ -16,7 +16,7 @@ const Window = () => {
             <div className="clouds cloud2"></div>
             <div className="clouds cloud1"></div>
           </div>
-
+          
           <div className="innerline-center"></div>
           <div className="innerline-hor1"></div>
           <div className="innerline-hor2"></div>

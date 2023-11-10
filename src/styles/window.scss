@@ -19,7 +19,7 @@
 
 .window-container {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -130,7 +130,8 @@
   box-shadow: clampRem(25, 40, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -10, $bp-mobile, $bp-regular) white, 
   clampRem(-20, -50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -8, $bp-mobile, $bp-regular) white;
   top: clampRem(140, 280, $bp-mobile, $bp-regular);
-
+  left: clampRem(80, 160, $bp-mobile, $bp-regular);
+  animation: cloudwind 50s linear infinite;
 }
 
 .cloud2 {
@@ -138,9 +139,27 @@
   height: clampRem(25, 50, $bp-mobile, $bp-regular);
   box-shadow: clampRem(30, 50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -12, $bp-mobile, $bp-regular) white, 
   clampRem(-35, -35, $bp-mobile, $bp-regular) clampRem(2, 15, $bp-mobile, $bp-regular) 0 clampRem(-3, -5, $bp-mobile, $bp-regular) rgb(255, 255, 255);
-  top: clampRem(35, 60, $bp-mobile, $bp-regular);
+  top: clampRem(35, 105, $bp-mobile, $bp-regular);
   left: clampRem(80, 160, $bp-mobile, $bp-regular);
+
+  animation: cloudwind 35s linear infinite;
 }
+
+
+@keyframes cloudwind {
+  0%{
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+      left: -45%;
+      opacity: 0.2;
+  }
+}
+
+
 
 /// PLANTS
 

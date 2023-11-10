@@ -11,8 +11,8 @@ footer {
         fill: var(--darkgrey);
 
         a svg {
-            width: clampRem(30,80, $bp-mobile, $bp-regular);
-            height: clampRem(30, 80, $bp-mobile, $bp-regular);
+            width: clampRem(30,70, $bp-mobile, $bp-regular);
+            height: clampRem(30, 70, $bp-mobile, $bp-regular);
             
             
         }
@@ -24,7 +24,5 @@ footer {
         a:hover {
             fill: #5cce7e;
         }
-
-        
     }
 }

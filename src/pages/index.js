@@ -16,8 +16,6 @@ const Index = () => {
         <Window></Window>
         <Nav></Nav>
       </main>
-
-
     </Layout>
   )
 }
