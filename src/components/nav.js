@@ -11,7 +11,7 @@ const Nav = () => {
         <ul>
         <li class=""> <span>&#10148;</span>Portfolio</li>
         <li class=""><span>&#10022;</span> Codepen</li>
-        <li class="test"><span>&#10077;</span> About</li>
+        <li class=""><span>&#10077;</span> About</li>
         </ul>
         </div>
     </>

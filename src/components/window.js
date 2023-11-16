@@ -1,12 +1,49 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/window.scss";
 
 const Window = () => {
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  let pageBackground = document.querySelector("body");
+
+
+  const handleMouseDown = () => {
+    let body = document.querySelector('body')
+    let wall = document.querySelector('.wall');
+    let windowtop = document.querySelector('.window-top');
+    let windowmain = document.querySelector('.window-main');
+    let lightray = document
+
+    if (isClicked === true){
+      setIsClicked(false);
+      wall.classList.add('nightmode-bg');
+      body.classList.add('nightmode-bg');
+      windowtop.classList.add('nightmode-window');
+      windowmain.classList.add('nightmode-window');
+
+    } else {
+      setIsClicked(true);
+      wall.classList.remove('nightmode-bg');
+      body.classList.remove('nightmode-bg');
+      windowtop.classList.remove('nightmode-window');
+      windowmain.classList.remove('nightmode-window');
+    }
+
+  };
+
+
+
+
   return (
     <>
         <div className="window-container">
         <div className="top-lamp"></div>
-      <div className="lamp"></div>          
+      <div className="lamp"
+                      onMouseDown={handleMouseDown}
+      ></div>   
+      <div className="lightray"></div>       
       <div className="wall">
 
         <div className="window">
