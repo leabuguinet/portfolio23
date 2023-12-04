@@ -16,6 +16,15 @@
   background: var(--sky-night) !important;
  }
 
+ canvas {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  background-color: #33650a;
+  z-index: 5;
+  opacity: 0;
+}
+
 
  .lightray {
   position: absolute;
@@ -26,6 +35,11 @@
   top: clampRem(0, 80, $bp-mobile, $bp-regular);
   height: clampRem(90, 500, $bp-mobile, $bp-regular);
   z-index: 48;
+  display: none;
+ }
+
+ .lightray.lighton {
+  display: block !important;
  }
 
 .window-container {
@@ -38,6 +52,7 @@
   //min-width: 60vmin;;
   //width: 50%;
 }
+
 
 .top-lamp {
   z-index: 50;
@@ -129,12 +144,17 @@
   bottom: clampRem(65, 110, $bp-mobile, $bp-regular);
 }
 
+
 .clouds {
   width: clampRem(45, 90, $bp-mobile, $bp-regular);
   height: clampRem(30, 60, $bp-mobile, $bp-regular);
   background-color: white;
   position: absolute;
   border-radius: 100%;
+}
+
+.clouds.noclouds {
+  display: none;
 }
 
 .cloud1 {
