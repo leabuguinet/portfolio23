@@ -22,8 +22,8 @@ const Window = () => {
     let clouds = document.querySelectorAll(".clouds");
 
 
-    if (isClicked === true) {
-      setIsClicked(false);
+    if (isClicked === false) {
+      setIsClicked(true);
       
       wall.classList.add("nightmode-bg");
       body.classList.add("nightmode-bg");
@@ -88,7 +88,7 @@ const Window = () => {
 
 
     } else {
-      setIsClicked(true);
+      setIsClicked(false);
       wall.classList.remove("nightmode-bg");
       body.classList.remove("nightmode-bg");
       windowtop.classList.remove("nightmode-window");
