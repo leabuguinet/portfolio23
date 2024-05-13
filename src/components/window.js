@@ -35,56 +35,8 @@ const Window = () => {
         clouds[c].classList.add("noclouds");
       }
 
-      var canvas = document.getElementById("tutorial");
-      canvas.style.opacity ='1';
 
-      if (canvas.getContext && isTest === false) {
-
-    
-
-          var canvas = document.getElementById("tutorial");
-          var ctx = canvas.getContext("2d");
-          function drawStar(cx, cy, spikes, outerRadius, innerRadius) {
-            var rot = (Math.PI / 2) * 3;
-            var x = cx;
-            var y = cy;
-            var step = Math.PI / spikes;
-        
-            ctx.beginPath();
-            ctx.moveTo(cx, cy - outerRadius);
-            for (let i = 0; i < spikes; i++) {
-              x = cx + Math.cos(rot) * outerRadius;
-              y = cy + Math.sin(rot) * outerRadius;
-              ctx.lineTo(x, y);
-              rot += step;
-        
-              x = cx + Math.cos(rot) * innerRadius;
-              y = cy + Math.sin(rot) * innerRadius;
-              ctx.lineTo(x, y);
-              rot += step;
-            }
-            ctx.lineTo(cx, cy - outerRadius);
-            ctx.closePath();
-            ctx.lineWidth = 1;
-            //ctx.strokeStyle = "skyblue";
-            //ctx.stroke();
-            ctx.fillStyle = "yellow";
-            ctx.fill();
-          }
-          let numStars = 13;
-
-          let canvash = canvas.offsetHeight;
-          let canvasw = canvas.offsetWidth;
-
-          for(var i = 0; i < numStars; i++) {
-            var x = Math.round(Math.random() * canvash);
-            var y = Math.round(Math.random() * canvasw);
-            drawStar(x, y, 6, 3, 1);
-          }
-
-          setIsTest(true);
-
-      }
+      
 
 
     } else {
@@ -106,20 +58,24 @@ const Window = () => {
 
 
 
-  
-
-
-
   return (
     <>
       <div className="window-container">
-        <div className="top-lamp"></div>
-        <div className="lamp" onMouseDown={handleMouseDown}></div>
-        <div className="lightray"></div>
+
+        <div className="lamp-container">
+          <div className="top-lamp"></div>
+          <div className="lamp" onMouseDown={handleMouseDown}></div>
+          <div className="lightray"></div>
+
+        </div>
+
         <div className="wall">
           <div className="window">
             <div className="window-top">
-              <canvas id="tutorial"></canvas>
+            <div className="moon"></div>
+              <div className="star"></div>
+              <div className="star-2"></div>
+              <div className="star-3"></div>
             </div>
 
             <div className="window-main">

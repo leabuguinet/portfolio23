@@ -16,26 +16,100 @@
   background: var(--sky-night) !important;
  }
 
- canvas {
-  border: 1px solid black;
-  width: 100%;
-  height: 100%;
-  background-color: #33650a;
-  z-index: 5;
-  opacity: 0;
+.moon {
+  position: absolute;
+  margin: auto;
+  top: -70px;
+  right: 0;
+  bottom: clampRem(-60, 0, $bp-mobile, $bp-regular);
+  left: clampRem(-25, -80, $bp-mobile, $bp-regular);
+  width: clampRem(30, 60, $bp-mobile, $bp-regular);
+  height: clampRem(30, 60, $bp-mobile, $bp-regular);
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0px 0px rgb(234, 230, 199);
+  transform: rotate(140deg);
+
+  @include max($bp-tablet-px) {
+    box-shadow: 15px 10px 0px 0px rgb(234, 230, 199);
+  }
+  @include max($bp-mobile-px) {
+    box-shadow: 15px 5px 0px 0px rgb(234, 230, 199);
+  }
+}
+
+.star, .star-2, .star-3 {
+  position: absolute;
+  background: #EDC951;
+  mask: radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%;
+}
+
+.star, .star-3 {
+  animation: glittering 4s ease-in-out infinite;
+}
+
+.star-2 {
+  animation: glittering 5s ease-in-out infinite;
+}
+
+@keyframes glittering {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
+}
+
+
+.star {
+left: clampRem(15, 60, $bp-mobile, $bp-regular);
+bottom: clampRem(25, 70, $bp-mobile, $bp-regular);
+height: clampRem(20, 30, $bp-mobile, $bp-regular);
+width: clampRem(10, 20, $bp-mobile, $bp-regular);
+}
+
+.star-2 {
+  left: clampRem(5, 35, $bp-mobile, $bp-regular);
+  bottom: clampRem(10, 150, $bp-mobile, $bp-regular);
+  height: clampRem(10, 20, $bp-mobile, $bp-regular);
+  width: clampRem(10, 15, $bp-mobile, $bp-regular);
+}
+
+.star-3 {
+  left: clampRem(30, 20, $bp-mobile, $bp-regular);
+  bottom: clampRem(15, 90, $bp-mobile, $bp-regular);
+  height: clampRem(10, 15, $bp-mobile, $bp-regular);
+  width: clampRem(5, 10, $bp-mobile, $bp-regular);
 }
 
 
  .lightray {
-  position: absolute;
-  width: clampRem(80, 700, $bp-mobile, $bp-regular);
+  position: relative;
+  width: 700px;
   background-image: linear-gradient(#fcb10d99, #ffffff00);
   clip-path: polygon(50% 0, 100% 200%, 0 200%);
-  left: clampRem(0, 30, $bp-mobile, $bp-regular);
-  top: clampRem(0, 80, $bp-mobile, $bp-regular);
-  height: clampRem(90, 500, $bp-mobile, $bp-regular);
+ 
+  right: 230px;
+  top: -100px;
+  height: 500px;
+  right: 290px;
   z-index: 48;
   display: none;
+
+  @include max($bp-mobile-px) {
+    //top: 50px;
+  }
  }
 
  .lightray.lighton {
@@ -55,28 +129,33 @@
   //width: 50%;
 }
 
+.lamp-container {
+  position: absolute;
+  width: 120px;
+  top: 0px;
+  right: 0px;
+}
+
 
 .top-lamp {
   z-index: 50;
-  position: absolute;
-  width: clampRem(3, 5, $bp-mobile, $bp-regular);
-  height: clampRem(90, 150, $bp-mobile, $bp-regular);
+  position: relative;
+  width: 5px;
+  height: 150px;
   background: var(--darkgrey);
   top: 0;
-  right: clampRem(90, 120, $bp-mobile, $bp-regular);
+  left: 55px;
 }
 
 
 .lamp {
   z-index: 50;
-  position: absolute;
-  width: clampRem(80, 120, $bp-mobile, $bp-regular);
-  top: clampRem(50, 60, $bp-mobile, $bp-regular);
+  position: relative;
+  width: 120px;
   border-radius: 10%;
-  right: clampRem(50, 60, $bp-mobile, $bp-regular);
-  border-bottom: clampRem(50, 100, $bp-mobile, $bp-regular) solid var(--darkgrey);
-  border-left: clampRem(10, 20, $bp-mobile, $bp-regular) solid transparent;
-  border-right: clampRem(10, 20, $bp-mobile, $bp-regular) solid transparent;
+  border-bottom: 100px solid var(--darkgrey);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
   height: 0;
 }
 
@@ -115,6 +194,7 @@
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .innerline-center {
