@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'base';
+
+.test {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.about-container {
+
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background-color: var(--dark-yellow);
+
+}

@@ -11,3 +11,4 @@ const headComponents = [
   export const onRenderBody = ({ setHeadComponents }) => {
     setHeadComponents(headComponents)
   }
+

@@ -3,27 +3,27 @@ import Layout from "../components/layout"
 import Portrait from "../components/portrait"
 import Window from "../components/window"
 import Nav from "../components/nav"
-import "../styles/about.scss"
+import "../styles/homepage.scss"
 import "../styles/variables.scss"
 import "../styles/base.scss"
 //import { Head } from "../components/head"
 
-const Index = ({ location }) => {
-
-  const pageUrl = location.pathname;
-
-
+const Apropos = () => {
   return (
-    <Layout pageUrl={pageUrl}>
+    <Layout>
 
-        <div className="homepage-container">
-        <Portrait></Portrait>
-        <Window></Window>
-        <Nav></Nav>
-        </div>
+
+      <div className="about-container">
+      
+      <div className="test"></div>
+        <h5>COUCOU</h5>
+
+      </div>
+      
+       
 
     </Layout>
   )
 }
 
-export default Index
+export default Apropos

@@ -9,6 +9,7 @@
 body {
     
     --home-bg: #e4eed3;
+    --home-bg: #e5b597;
     --home-bg-night: #2c2a3d;
 
     --sky: #d6eaf8;
@@ -23,6 +24,17 @@ body {
     --light-skin: #f3af9f;
     --yellow: #f6d359;
     --dark-yellow: #e9a964;
+    --purpleburgandy: #815454;
+    --darkpurpleburgandy: #39385a;
+    
 
     color: var(--darkgrey);
+}
+
+.displaynone {
+    display: none !important;
+}
+
+.displayblock {
+    display: block !important;
 }

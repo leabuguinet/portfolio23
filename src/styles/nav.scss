@@ -10,6 +10,11 @@
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 li {
   list-style: none;
   font-size: clampRem(25, 50, $bp-mobile, $bp-regular);
@@ -29,7 +34,13 @@ li {
 li:hover {
   font-variation-settings: "wght" 500;
   letter-spacing: 1px;
-  text-shadow: 2px 5px #5cce7e;
+  text-shadow: 2px 5px rgb(255, 213, 165);
+}
+
+li.hover {
+  font-variation-settings: "wght" 500;
+  letter-spacing: 1px;
+  text-shadow: 2px 5px rgb(41, 19, 42);
 }
 
 li span {

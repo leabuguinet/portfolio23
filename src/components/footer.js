@@ -9,7 +9,7 @@ import Telegram from '../assets/svg/telegram.inline.svg';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
 
 <div className='footer-logos'>
         <a aria-label="Github" href='https://github.com/leabuguinet'><Github /></a>
