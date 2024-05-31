@@ -60,6 +60,7 @@
   min-height: clampRem(150, 300, $bp-mobile, $bp-regular);
   background: #ffffff;
   background: var(--purpleburgandy);
+  background-image: url('../assets/svg/noise-light.png');
   border-radius: 100%;
   display: flex;
   align-items: center;

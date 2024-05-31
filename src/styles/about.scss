@@ -2,16 +2,247 @@
 @import 'base';
 
 .test {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
 }
 
 .about-container {
+    background: rgb(252,196,82);
+    background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, rgba(250,208,124,1) 0%, rgba(220,197,151,1) 35%, rgba(241,227,200,1) 100%);  
+    //background-image: url('../assets/svg/noise-light.png');
+}
 
+
+
+.about-content {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 2rem;
-    background-color: var(--dark-yellow);
+    min-height: 100vh;
+}
 
+.curriculum-paper {
+    background-color: white;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.curriculum-content {
+    h1, h2 {
+        font-size: clampRem(25, 30, $bp-mobile, $bp-regular);
+        font-family: "Cabinet Grotesk", sans-serif;
+        font-variation-settings: "wght" 500;
+    }
+
+    h2 {
+        font-size: clampRem(20, 22, $bp-mobile, $bp-regular);
+        font-variation-settings: "wght" 300;
+        margin: 2rem 0;
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+
+        /* &:after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 20px;
+            background: #D3EEE1;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        } */
+    }
+
+    p {
+        font-family: "Cabinet Grotesk", sans-serif;
+        font-size: clampRem(15, 18, $bp-mobile, $bp-regular);
+        font-variation-settings: "wght" 300;
+    }
+
+    .exp-pro {
+        display: flex;
+
+    }
+}
+
+.pilea-container {
+
+    position: relative; 
+    width: clampRem(200, 400, $bp-mobile, $bp-regular);
+    height: clampRem(200, 400, $bp-mobile, $bp-regular);
+    left: 77%;
+
+    .pot{
+        position: absolute;
+        width: clampRem(200, 400, $bp-mobile, $bp-regular);
+        height: clampRem(200, 400, $bp-mobile, $bp-regular);
+        border-radius: 100%;
+        border: 10px solid rgb(234, 229, 229);
+        background-color: rgb(59, 34, 34);
+    }
+
+    .pilea-center {
+        position: absolute;
+        width: clampRem(20, 40, $bp-mobile, $bp-regular);
+        height: clampRem(20, 40, $bp-mobile, $bp-regular);
+        border-radius: 100%;
+        background-color: rgb(36, 21, 21);
+        left: clampRem(90, 180, $bp-mobile, $bp-regular);
+        bottom: clampRem(90, 180, $bp-mobile, $bp-regular);
+        z-index: 2;
+    }
+
+    .stem, .stem-2, .stem-3, .stem-4, .stem-5, .stem-6, .stem-7, .stem-8, .stem-9, .stem-10, .stem-11, .stem-12, .stem-13, .stem-14 {
+        position: absolute;
+        width: clampRem(5, 10, $bp-mobile, $bp-regular);
+        border-radius: 5px;
+        background-color: rgb(22, 92, 51);
+        left:  50%;
+        bottom: 50%;
+        transform-origin: bottom;
+
+        &:after{
+            content:"";
+            position: absolute;
+            border-radius: 100%;
+        }
+        &:before{
+            content:"";
+            position: absolute;
+            border-radius: 100%;
+        }
+    }
+
+    .stem, .stem-2, .stem-3, .stem-4 {
+        height: clampRem(150, 250, $bp-mobile, $bp-regular);
+        &:after{
+            background-color: rgb(3, 95, 3);
+            border: 1px solid rgb(10, 75, 10);
+            right: clampRem(-35, -50, $bp-mobile, $bp-regular);
+            top: clampRem(-20, -65, $bp-mobile, $bp-regular);
+            z-index: 2;
+            width: clampRem(60, 120, $bp-mobile, $bp-regular);
+            height: clampRem(60, 120, $bp-mobile, $bp-regular);
+            box-shadow: -10px -3px 7px rgba(40, 40, 40, 0.362);
+        }
+
+        &:before {
+            background-color: rgb(174, 205, 174);
+            left: clampRem(-5, -0, $bp-mobile, $bp-regular);
+            top: clampRem(5, 60, $bp-mobile, $bp-regular);
+            z-index: 3;
+            width: clampRem(5, 10, $bp-mobile, $bp-regular);
+            height: clampRem(5, 10, $bp-mobile, $bp-regular);
+        }
+    }
+
+    .stem-2 {
+        transform: rotate(114deg);
+    }
+    .stem-3 {
+        transform: rotate(190deg);
+        &:after{
+            background-color: rgb(4, 69, 4);
+        }
+    }
+    .stem-4 {
+        transform: rotate(260deg);
+    }
+
+    .stem-5, .stem-6, .stem-7, .stem-8, .stem-9 {
+        height: clampRem(100, 200, $bp-mobile, $bp-regular);
+        &:after{
+            background-color: rgb(5, 119, 5);
+            border: 1px solid rgb(18, 133, 18);
+            right: clampRem(-30, -50, $bp-mobile, $bp-regular);
+            top: clampRem(-35, -65, $bp-mobile, $bp-regular);
+            z-index: 2;
+            width: clampRem(55, 110, $bp-mobile, $bp-regular);
+            height: clampRem(55, 110, $bp-mobile, $bp-regular);
+            box-shadow: -10px -3px 16px rgba(40, 40, 40, 0.362);
+        }
+
+        &:before {
+            background-color: rgb(174, 205, 174);
+            left: clampRem(0, 0, $bp-mobile, $bp-regular);
+            top: clampRem(4, 50, $bp-mobile, $bp-regular);
+            z-index: 4;
+            width: clampRem(4, 7, $bp-mobile, $bp-regular);
+            height: clampRem(4, 7, $bp-mobile, $bp-regular);
+        }
+    }
+
+    .stem-5 {
+        transform: rotate(50deg);
+        &:after {
+            width: clampRem(55, 100, $bp-mobile, $bp-regular);
+            height: clampRem(55, 110, $bp-mobile, $bp-regular);
+        }
+    }
+    .stem-6 {
+        transform: rotate(130deg);
+    }
+    .stem-7 {
+        transform: rotate(150deg);
+    }
+    .stem-8 {
+        transform: rotate(240deg);
+    }
+    .stem-9 {
+        transform: rotate(290deg);
+    }
+
+    .stem-10, .stem-11, .stem-12, .stem-13, .stem-14 {
+        height: clampRem(50, 100, $bp-mobile, $bp-regular);
+        &:after{
+            background-color: rgb(6, 136, 6);
+            border: 1px solid rgb(17, 138, 17);
+            left: clampRem(-20, -30, $bp-mobile, $bp-regular);
+            bottom: clampRem(35, 60, $bp-mobile, $bp-regular);
+            z-index: 3;
+            width: clampRem(40, 80, $bp-mobile, $bp-regular);
+            height: clampRem(40, 80, $bp-mobile, $bp-regular); 
+            box-shadow: -10px -3px 20px rgba(40, 40, 40, 0.362);
+        }
+
+        &:before {
+            background-color: rgb(174, 205, 174);
+            left: clampRem(0, 10, $bp-mobile, $bp-regular);
+            top: clampRem(5, 0, $bp-mobile, $bp-regular);
+            z-index: 4;
+            width: clampRem(3, 5, $bp-mobile, $bp-regular);
+            height: clampRem(3, 5, $bp-mobile, $bp-regular);
+        }
+    }
+
+    .stem-10 {
+        transform: rotate(10deg);
+        &:after{
+            background-color: rgb(6, 162, 6);
+        }
+    }
+    .stem-11 {
+        transform: rotate(70deg);
+    }
+    .stem-12 {
+        transform: rotate(150deg);
+    }
+    .stem-13 {
+        transform: rotate(200deg);
+    }
+    .stem-14 {
+        transform: rotate(280deg);
+        height: 70px;
+        &:after{
+            background-color: rgb(81, 162, 6);
+        }
+        &:before {
+            left: clampRem(0, 15, $bp-mobile, $bp-regular);
+            top: clampRem(0, -10, $bp-mobile, $bp-regular);
+        }
+    }
 }
