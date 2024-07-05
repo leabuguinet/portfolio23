@@ -6,6 +6,7 @@
     
 } 
 
+
 body {
     
     --home-bg: #e4eed3;
@@ -27,9 +28,18 @@ body {
     --purpleburgandy: #815454;
     --darkpurpleburgandy: #39385a;
     
-
+//overflow: unset !important;
     color: var(--darkgrey);
 }
+
+main {
+    //overflow: hidden;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
 
 .displaynone {
     display: none !important;
@@ -38,3 +48,4 @@ body {
 .displayblock {
     display: block !important;
 }
+

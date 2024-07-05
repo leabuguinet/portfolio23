@@ -30,7 +30,13 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-  ],
-  
-}
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/assets/svg/favicon.inline.svg"
+      }
+    }
+    
 
+  ],
+}

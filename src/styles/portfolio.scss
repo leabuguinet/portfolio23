@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'base';
+
+
+.portfolio-container {
+    background: rgb(208, 232, 192);
+    background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, rgb(211, 221, 186) 0%, rgb(160, 173, 132) 35%, rgb(209, 241, 200) 100%);  
+    //background-image: url('../assets/svg/noise-light.png');
+    margin-bottom: 12rem;
+
+    .nav-container {
+        height: fit-content;
+        width: 100%;
+        max-width: 1500px;
+        padding-top: 2rem;
+
+        @include max($bp-tablet-px){
+            display: none;
+        }
+    }
+    .nav-container ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+.portfolio-content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    //min-height: 100vh;
+    //height: 100vh;
+
+    .gallery {
+        align-items: center;
+        min-height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-bottom: 10rem;
+        width: 100%;
+    }
+
+    .gallery-item {
+        width: calc(100% / 5 - 10px);
+        min-width: 200px;
+    }
+
+    .test {
+        height: auto;
+        width: 100%;
+    }
+    
+}
+
+
+  

@@ -7,15 +7,13 @@ import { motion } from "framer-motion"
 const Layout = ({ children, pageUrl }) => {
 
   let isIndexPage = false;
-  let testinitial;
-  let testanimate;
-  let testexit;
   let motionMain;
 
 
   if (pageUrl === "/"){
     isIndexPage = true;
   }
+
 
   if(isIndexPage === true){
     motionMain = <motion.main initial= {{ opacity: 0, y: '-100%'}}

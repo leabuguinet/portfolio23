@@ -1,46 +1,65 @@
 @import 'variables';
 @import 'base';
 
-.test {
-    width: 100%;
-    height: 100vh;
-
-}
 
 .about-container {
     background: rgb(252,196,82);
     background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, rgba(250,208,124,1) 0%, rgba(220,197,151,1) 35%, rgba(241,227,200,1) 100%);  
     //background-image: url('../assets/svg/noise-light.png');
+    margin-bottom: 12rem;
+    //overflow: hidden;
+    overflow: clip;
+
+
+    .nav-container {
+        height: fit-content;
+        width: 100%;
+        max-width: 1500px;
+        padding-top: 2rem;
+
+        @include max($bp-tablet-px){
+            display: none;
+        }
+    }
+    .nav-container ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
 }
-
-
 
 .about-content {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 2rem;
-    min-height: 100vh;
+    //min-height: 100vh;
 }
+
 
 .curriculum-paper {
     background-color: white;
-    width: 800px;
-    height: 800px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 50px;
+    margin-bottom: 12rem;
+    @include max($bp-small-px){
+        padding: 25px;
+    }
 }
 
 .curriculum-content {
     h1, h2 {
-        font-size: clampRem(25, 30, $bp-mobile, $bp-regular);
+        font-size: clampRem(22, 30, $bp-mobile, $bp-regular);
         font-family: "Cabinet Grotesk", sans-serif;
         font-variation-settings: "wght" 500;
     }
 
     h2 {
-        font-size: clampRem(20, 22, $bp-mobile, $bp-regular);
+        font-size: clampRem(16, 22, $bp-mobile, $bp-regular);
         font-variation-settings: "wght" 300;
-        margin: 2rem 0;
+        margin: 3rem 0 2.5rem 0;
         position: relative;
         z-index: 2;
         text-transform: uppercase;
@@ -57,16 +76,100 @@
         } */
     }
 
+    h3 {
+        font-family: "Cabinet Grotesk", sans-serif;
+        font-size: clampRem(16, 18, $bp-mobile, $bp-regular);
+    }
+
     p {
         font-family: "Cabinet Grotesk", sans-serif;
-        font-size: clampRem(15, 18, $bp-mobile, $bp-regular);
+        font-size: clampRem(14, 18, $bp-mobile, $bp-regular);
         font-variation-settings: "wght" 300;
     }
 
-    .exp-pro {
+    .exp-pro-item {
         display: flex;
-
+        margin-bottom: 2rem;
+        @include max($bp-small-px){
+            flex-direction: column;
+            gap: 1rem;
+        }
     }
+
+    .exp-pro-date {
+        margin-right: 2rem;
+        min-width: 100px;
+    }
+
+    .skills h3 {
+        margin-bottom: 1rem;
+    }
+
+    .skills-items {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        @include max($bp-tablet-px){
+            flex-direction: column;
+        }
+    }
+
+    .skills-item {
+        width: fit-content;
+
+        @include max($bp-tablet-px){
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .skills-logolist {
+        display: flex;
+        flex-wrap: wrap;
+
+        & div {
+            width: calc(100% / 3);
+            @include max($bp-tablet-px){
+                width: calc(100% / 2);
+                min-width: 150px;
+            }
+        }
+
+        p {
+            line-height: 1.8;
+        }
+    }
+
+    .skills-item-top svg {
+        width: 20px;
+        height: 20px;
+        color: var(--darkgrey);
+        fill: var(--darkgrey);
+        margin-right: 15px;
+    }
+
+    .exp-pro-description p {
+        font-size: clampRem(15, 16, $bp-mobile, $bp-regular);
+    }
+
+    .exp-pro-description p:first-of-type {
+        font-size: clampRem(15, 18, $bp-mobile, $bp-regular);
+        font-variation-settings: "wght" 500;
+    }
+    .exp-pro-description p:nth-child(2) {
+        font-variation-settings: "wght" 400;
+    }
+
+    .diplomas {
+        display: none;
+    }
+
+    .diploma-item {
+        margin-bottom: 2rem;
+    }
+
+
 }
 
 .pilea-container {
@@ -75,6 +178,12 @@
     width: clampRem(200, 400, $bp-mobile, $bp-regular);
     height: clampRem(200, 400, $bp-mobile, $bp-regular);
     left: 77%;
+
+    @include max($bp-tablet-px){
+        left: unset;
+        right: 20% !important;
+        top: -65px;
+    }
 
     .pot{
         position: absolute;

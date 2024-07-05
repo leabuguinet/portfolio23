@@ -14,16 +14,28 @@ const Index = ({ location }) => {
 
 
   return (
+
+    <>
+
+  
     <Layout pageUrl={pageUrl}>
+
+             
+
+         
+
 
         <div className="homepage-container">
         <Portrait></Portrait>
         <Window></Window>
-        <Nav></Nav>
+        <Nav pageUrl={pageUrl}></Nav>
         </div>
 
     </Layout>
+    </>
   )
 }
 
+
 export default Index
+

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/window.scss";
+import { m } from "framer-motion";
 
 
 /* Functions to change background colour day/night  */
@@ -33,7 +34,9 @@ const Window = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleMouseDown = () => {
+
     let body = document.querySelector(".homepage-container");
+    let main = document.querySelector("main");
     let wall = document.querySelector(".wall");
     let windowtop = document.querySelector(".window-top");
     let windowmain = document.querySelector(".window-main");
@@ -64,6 +67,7 @@ const Window = () => {
       set_daynightColor(wall, 'backgroundColor', 'var(--home-bg-night)');
       set_daynightColor(circle, 'backgroundColor', 'var(--darkpurpleburgandy)');
       set_daynightColor(body, 'color', 'var(--home-bg)');
+      set_daynightColor(main, 'backgroundColor', 'var(--home-bg-night)');
       set_daynightColor(footer, 'backgroundColor', 'var(--home-bg-night)');
 
       for (let l = 0; l < footerlogos.length; l++) {
@@ -111,6 +115,7 @@ const Window = () => {
       set_daynightColor(wall, 'backgroundColor', 'var(--home-bg)');
       set_daynightColor(circle, 'backgroundColor', 'var(--purpleburgandy)');
       set_daynightColor(body, 'color', 'var(--darkgrey)');
+      set_daynightColor(main, 'backgroundColor', 'var(--home-bg)');
       set_daynightColor(footer, 'backgroundColor', 'var(--home-bg)');
   
     }
