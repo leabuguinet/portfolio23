@@ -1,7 +1,10 @@
-@import "variables";
-@import "base";
 
 footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
     .footer-logos {
         display: flex;
         align-items: center;
@@ -12,9 +15,7 @@ footer {
 
         a svg {
             width: clampRem(30,70, $bp-mobile, $bp-regular);
-            height: clampRem(30, 70, $bp-mobile, $bp-regular);
-            
-            
+            height: clampRem(30, 70, $bp-mobile, $bp-regular); 
         }
 
         a {
@@ -25,6 +26,14 @@ footer {
             fill: #5cce7e;
             fill:  rgb(255, 255, 255);
         }
+    }
+
+    .mention-link {
+        font-family: "Cabinet Grotesk", sans-serif;
+        font-size: clampRem(14, 18, $bp-mobile, $bp-regular);
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
     }
 }
  

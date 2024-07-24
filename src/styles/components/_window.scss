@@ -1,6 +1,3 @@
-@import "variables";
-@import "base";
-
 
 * {
   margin: 0;
@@ -46,7 +43,7 @@
 }
 
 .moon, .star, .star-2, .star-3 {
-  display: none !important;
+  display: none;
 }
 
 @keyframes glittering {
@@ -127,6 +124,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  //overflow: hidden;
   //min-width: 60vmin;;
   //width: 50%;
 }
@@ -147,31 +145,33 @@
   position: relative;
   width: 5px;
   height: clampRem(50, 150, $bp-mobile, $bp-regular);
-  background: var(--darkgrey);
+  background: var(--lamp);
   top: 0;
   left: 48%;
 
 }
 
 .lamp {
+  display: block;
   z-index: 50;
   position: relative;
   width: 120px;
   width: clampRem(70, 120, $bp-mobile, $bp-regular);
   border-radius: 10%;
-  border-bottom: clampRem(30, 100, $bp-mobile, $bp-regular) solid var(--darkgrey);
+  border-bottom: clampRem(30, 100, $bp-mobile, $bp-regular) solid var(--lamp);
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   height: 0;
-  
-
+  background: none;
+  border-top: none;
+  cursor: pointer;
 }
 
 .wall {
   width: clampRem(300, 500, $bp-mobile, $bp-regular);
   //height: 55vmin;
   background: var(--home-bg);
-  border-bottom: 4px solid grey;
+  border-bottom: 4px solid rgb(255, 213, 165);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,14 +238,14 @@
 .clouds {
   width: clampRem(45, 90, $bp-mobile, $bp-regular);
   height: clampRem(30, 60, $bp-mobile, $bp-regular);
-  background-color: white;
+  background-color: var(--clouds);
   position: absolute;
   border-radius: 100%;
 }
 
 .cloud1 {
-  box-shadow: clampRem(25, 40, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -10, $bp-mobile, $bp-regular) white, 
-  clampRem(-20, -50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -8, $bp-mobile, $bp-regular) white;
+  box-shadow: clampRem(25, 40, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -10, $bp-mobile, $bp-regular) var(--clouds), 
+  clampRem(-20, -50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -8, $bp-mobile, $bp-regular) var(--clouds);
   top: clampRem(140, 280, $bp-mobile, $bp-regular);
   left: clampRem(80, 160, $bp-mobile, $bp-regular);
   animation: cloudwind 50s linear infinite;
@@ -254,7 +254,7 @@
 .cloud2 {
   width: clampRem(50, 100, $bp-mobile, $bp-regular);
   height: clampRem(25, 50, $bp-mobile, $bp-regular);
-  box-shadow: clampRem(30, 50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -12, $bp-mobile, $bp-regular) white, 
+  box-shadow: clampRem(30, 50, $bp-mobile, $bp-regular) clampRem(8, 10, $bp-mobile, $bp-regular) 0 clampRem(-5, -12, $bp-mobile, $bp-regular) var(--clouds), 
   clampRem(-35, -35, $bp-mobile, $bp-regular) clampRem(2, 15, $bp-mobile, $bp-regular) 0 clampRem(-3, -5, $bp-mobile, $bp-regular) rgb(255, 255, 255);
   top: clampRem(35, 105, $bp-mobile, $bp-regular);
   left: clampRem(80, 160, $bp-mobile, $bp-regular);

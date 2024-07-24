@@ -13,6 +13,7 @@ module.exports = {
     description: "Développeuse web Front-End",
   },
   plugins: [
+    "gatsby-plugin-dark-mode",
     "gatsby-plugin-sass",
     "gatsby-transformer-remark",
     {

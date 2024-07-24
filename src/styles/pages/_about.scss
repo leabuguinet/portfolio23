@@ -1,12 +1,11 @@
-@import 'variables';
-@import 'base';
 
 
 .about-container {
-    background: rgb(252,196,82);
-    background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, rgba(250,208,124,1) 0%, rgba(220,197,151,1) 35%, rgba(241,227,200,1) 100%);  
+    background: var(--home-bg);
+    background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, #066b21 0%, #edffd1 35%, #e4e4d9 100%);  
+    background: url('../assets/svg/noise-light.png'), var(--home-bg);
     //background-image: url('../assets/svg/noise-light.png');
-    margin-bottom: 12rem;
+    padding-bottom: 2rem;
     //overflow: hidden;
     overflow: clip;
 
@@ -15,7 +14,11 @@
         height: fit-content;
         width: 100%;
         max-width: 1500px;
-        padding-top: 2rem;
+        padding: 2rem 0;
+
+        @include max($bp-small-px){
+            padding-bottom: 4rem;
+        }
 
         @include max($bp-tablet-px){
             display: none;
@@ -37,9 +40,8 @@
     //min-height: 100vh;
 }
 
-
 .curriculum-paper {
-    background-color: white;
+    background-color: var(--paper);
     max-width: 800px;
     margin: 0 auto;
     padding: 50px;
@@ -192,6 +194,7 @@
         border-radius: 100%;
         border: 10px solid rgb(234, 229, 229);
         background-color: rgb(59, 34, 34);
+        background: url('../assets/svg/noise-light.png'), rgb(39, 24, 15);  
     }
 
     .pilea-center {

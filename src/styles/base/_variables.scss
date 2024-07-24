@@ -101,6 +101,7 @@ $bp-s-mobile: 320;
     }
     @media(min-width: round($breakmin + $breakdiff)) {
         #{$property} : round($fmin + $fdiff) #{$value_important};
+
     }
 
 }

@@ -1,11 +1,8 @@
 import React from "react";
 import Layout from "../components/layout";
-import Portrait from "../components/portrait";
-import Window from "../components/window";
 import Nav from "../components/nav";
-import "../styles/homepage.scss";
-import "../styles/variables.scss";
-import "../styles/base.scss";
+
+
 //import { Head } from "../components/head"
 
 import WordpressLogo from '../assets/svg/wordpress.inline.svg';
@@ -27,20 +24,14 @@ const Apropos = ({ location }) => {
 
   return (
     <>
-          
-
 
     <Layout>
 
-   
-{/*     <div className="coucocccu">helfrfrlo</div> */}
-  
       <div className="about-container">
+
       <NavBurgerButton />
+
       <Nav pageUrl={pageUrl}></Nav>
-
-
-
       
         <div className="about-content">
           <div className="pilea-container">
@@ -230,8 +221,11 @@ const Apropos = ({ location }) => {
               </section>
             </div>
           </div>
+
         </div>
       </div>
+
+      
     </Layout>
     </>
   );

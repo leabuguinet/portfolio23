@@ -1,28 +1,13 @@
 import React from "react"
-import "../styles/base.scss"
-import "../styles/variables.scss"
-import "../styles/navburger.scss"
 import { Link } from "gatsby"
 import { motion } from "framer-motion";
 
 const NavBurgerMenu = ({ rotate }) => {
   
-  const openBurgerMenu = event => {
 
-    
-    //event.currentTarget.classList.toggle('open');
-
-
-    let NavBarContainer = document.querySelector('.wrapper2');
-    let Main = document.querySelector('body');
-    if(NavBarContainer){
-      NavBarContainer.classList.toggle('openMenu');
-      Main.classList.toggle('overflow');
-    }
-  }
   const variants = {
-    stop: { opacity: 0, y: 0  },
-    rotate: { opacity: 1,  y: '-100%', transition: { duration: 0.5 } }
+    close: { opacity: 0, y: 0, display: "none" },
+    open: { opacity: 1,  y: '-100%', transition: { duration: 0.5 } }
   };
 
 
@@ -31,18 +16,20 @@ const NavBurgerMenu = ({ rotate }) => {
 
 
 
-<motion.div className="wrapper2"          variants={variants}
-        animate={rotate ? 'rotate' : 'stop'}
+<motion.div className="wrapper-side-menu"          variants={variants}
+        animate={rotate ? 'open' : 'close'}
         
         >
+        <div className="links-list">
+          <ul>
+          <Link activeClassName="active" to="/"><li ><span>&#10047;</span>Accueil</li></Link>
+            <Link activeClassName="active" to="/portfolio"><li><span>&#10077;</span>Portfolio</li></Link>
+            <a href="https://codepen.io/leabuguinet"><li><span>&#10022;</span>Codepen</li></a>
+            <Link activeClassName="active" to="/apropos"><li><span>&#10077;</span>À propos</li></Link>
 
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Feedback</a></li>
-      </ul> 
+          </ul> 
+        </div>
+
     
   </motion.div> 
 

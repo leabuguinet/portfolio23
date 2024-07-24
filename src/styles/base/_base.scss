@@ -1,3 +1,5 @@
+
+
 *, html, body {
     margin: 0;
     padding: 0;
@@ -10,13 +12,13 @@
 body {
     
     --home-bg: #e4eed3;
-    --home-bg: #e5b597;
+    --home-bg: #eed7ac;
     --home-bg-night: #2c2a3d;
-
+    --about-bg: #fcc452;
     --sky: #d6eaf8;
     --sky-night: #0b0728;
-
     --darkgrey: #333232;
+    --lamp : #333232;
     --black: #00202a;
     --white: #f8f8f8;
     --blue: #ffd700;
@@ -27,14 +29,30 @@ body {
     --dark-yellow: #e9a964;
     --purpleburgandy: #815454;
     --darkpurpleburgandy: #39385a;
+    --nav-hover : #ffd5a5;
+    --clouds: #ffffff;
+
+    --paper: #ffffff;
+
     
 //overflow: unset !important;
     color: var(--darkgrey);
 }
 
-main {
-    //overflow: hidden;
+body.dark {
+    --home-bg: #2c2a3d;
+    --about-bg: #373531;
+    --sky: #0b0728;
+    --purpleburgandy: #39385a;
+    --lamp: #333232;
+    --darkgrey: #e5b597;
+    --nav-hover : #29132a;
+    --clouds : #ffffff00;
+    color: #e5b597;
+
+    --paper: #14152b;
 }
+
 
 .overflow{
     overflow: hidden;

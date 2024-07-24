@@ -1,10 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Nav from "../components/nav";
-import "../styles/portfolio.scss";
-import "../styles/variables.scss";
-import "../styles/base.scss";
-//import { Head } from "../components/head"
+
 import { motion } from "framer-motion";
 
 
@@ -48,14 +45,11 @@ const Portfolio = ({ location }) => {
 
   return (
     <>
-    <NavBurgerButton />
-
-
-
     <Layout>
   
       <div className="portfolio-container">
 
+    <NavBurgerButton />
       <Nav pageUrl={pageUrl}></Nav>
 
 
@@ -74,10 +68,14 @@ const Portfolio = ({ location }) => {
                 href={"/projet-" + index}
             >  
 
-              <motion.img variants={item} class="test" src={numbers[index]} ></motion.img>
+              <motion.img variants={item} className="test" src={numbers[index]} ></motion.img>
             </motion.a>
             ))}
             </motion.div>
+
+
+
+            
 
         </div>
     
