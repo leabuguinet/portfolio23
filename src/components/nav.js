@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 const Nav = ({ pageUrl }) => {
   
 
-  console.log(pageUrl);
   let isIndexPage = false;
   let homepageLink ;
 

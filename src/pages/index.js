@@ -32,6 +32,5 @@ const Index = ({ location }) => {
   )
 }
 
-
 export default Index
 

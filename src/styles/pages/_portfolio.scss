@@ -10,6 +10,8 @@
         width: 100%;
         max-width: 1500px;
         padding-top: 2rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
 
         @include max($bp-tablet-px){
             display: none;
@@ -28,6 +30,7 @@
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
     //min-height: 100vh;
     //height: 100vh;
 
@@ -36,19 +39,19 @@
         min-height: 100vh;
         margin: 0 auto;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
         padding-bottom: 10rem;
-        width: 100%;
+        width: 80%;
     }
 
     .gallery-item {
-        width: calc(100% / 5 - 10px);
+        width: calc(100% / 3 - 10px);
         min-width: 200px;
     }
 
-    .test {
+    .gallery-item-img {
         height: auto;
         width: 100%;
     }

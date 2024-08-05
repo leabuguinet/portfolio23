@@ -12,9 +12,11 @@
 body {
     
     --home-bg: #e4eed3;
-    --home-bg: #eed7ac;
+    --home-bg: #e5b597;
     --home-bg-night: #2c2a3d;
-    --about-bg: #fcc452;
+    --about-bg: #edcb87;
+    --mentions-bg: #c6ebb9;
+
     --sky: #d6eaf8;
     --sky-night: #0b0728;
     --darkgrey: #333232;
@@ -41,7 +43,9 @@ body {
 
 body.dark {
     --home-bg: #2c2a3d;
-    --about-bg: #373531;
+    --about-bg: #131327;
+    --mentions-bg: #032105;
+    
     --sky: #0b0728;
     --purpleburgandy: #39385a;
     --lamp: #333232;

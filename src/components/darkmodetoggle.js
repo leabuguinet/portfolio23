@@ -52,7 +52,6 @@ export default function DarkMode() {
         clouds[c].classList.remove("displaynone");
       }
 
-      
     }
     window.localStorage.setItem("theme", isDark);
   }, [isDark]);
