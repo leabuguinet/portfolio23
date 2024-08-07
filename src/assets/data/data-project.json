@@ -1,50 +1,60 @@
 [
     {
         "id": "0",
-        "title": "April Dancer",
-        "subtitle": "/images/aprildancer-artwork.jpeg",
-        "description":"c'est un super projet"
+        "title": "Karaba F.C.",
+        "img": "/static/karabafc-5c6db91c1fdfb8b6a6b4e1376362c526.png",
+        "description":"Design, développement et maintenance d'un site vitrine pour un groupe de musique. Affichage dynamique des dates de concert passées et à venir. Mise en avant des nouveaux titres et mise à jour du merch.",
+        "technologies": "React - Gatsby - JS - SASS - Framer Motion",
+        "year": "2022 - 2024"
 
 
     }, 
     {
         "id": "1",
-        "title": "Daily Orsay",
-        "subtitle": "/images/aprildancer-artwork.jpeg",
-        "description":""
+        "title": "A&J",
+        "img": "/images/aprildancer-artwork.jpeg",
+        "description":"Design et développement d'un site pour un mariage. Accessible via un QR code sur les invitations. Affichage du déroulé du jour J et informations pratiques",
+        "technologies": "PHP - SASS - GSAP",
+        "year": "2023"
 
 
     },
     {
         "id": "2",
-        "title": "April Dancer",
-        "subtitle": "/images/aprildancer-artwork.jpeg",
-        "description":""
+        "title": "Daily Orsay",
+        "img": "/images/aprildancer-artwork.jpeg",
+        "description":"Projet personnel utilisant l'API Images d'Art de la Rmn-Grand Palais. L'idée est de proposer aléatoirement chaque jour un tableau, une scuplture et une photographie faisant partie de la collection du Musée d'Orsay. Refonte du design en 2024",
+        "technologies": "PHP - SASS - GSAP",
+        "year": "2023-2024"
 
 
     },
     {
         "id": "3",
-        "title": "April Dancer",
-        "subtitle": "/images/aprildancer-artwork.jpeg",
-        "description":""
-
+        "title": "Archipel Contact",
+        "img": "/images/aprildancer-artwork.jpeg",
+        "description":"Design et développement de la refonte complète du site Archipel Contact, une agence de voyage B2B, spécialisée dans l'Indonésie. Un back-office sur-mesure permet de mettre à jour les voyages proposés.",
+        "technologies": "Symfony - SASS - JS",
+        "year": "2021"
 
     },
     {
         "id": "4",
-        "title": "April Dancer",
-        "subtitle": "/images/aprildancer-artwork.jpeg",
-        "description":""
+        "title": "Les Grands Espaces",
+        "img": "/images/aprildancer-artwork.jpeg",
+        "description":"Refonte du site pour une association d'éducation à l'image, en partenariat avec une illustratrice.",
+        "technologies": "Wordpress - SASS - JS",
+        "year": "2022"
 
 
     },
     {
         "id": "5",
-        "title": "April Dancer",
-        "subtitle": "/images/aprildancer-artwork.jpeg",
-        "description":""
-
+        "title": "ProCATination Game",
+        "img": "/images/aprildancer-artwork.jpeg",
+        "description":"Un petit jeu pierre-feuille-ciseaux contre un chat, qui décidera si vous avez le droit de procrastiner.",
+        "technologies": "React - Material UI",
+        "year": "2021"
 
     }
 

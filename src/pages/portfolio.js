@@ -29,7 +29,9 @@ const Portfolio = ({ location }) => {
 
   function openModal(index) {
     indexproject = index;
-    setShowProject(!showProject)
+    setShowProject(!showProject);
+    let body = document.querySelector('body');
+    body.classList.add('overflow')
 }
 
 
@@ -56,7 +58,20 @@ const Portfolio = ({ location }) => {
     },
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position);
 
+  };
+  
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
 
   return (
     <>
@@ -91,10 +106,13 @@ const Portfolio = ({ location }) => {
                 </motion.button>
               ))}
 
-              {showProject && <ProjectBox setShowProject={setShowProject} index={indexproject} />}
+              
             </motion.div>
+            
           </div>
         </div>
+        {showProject && <ProjectBox setShowProject={setShowProject} index={indexproject} scrollPosition={scrollPosition}/>}
+
       </Layout>
     </>
   );

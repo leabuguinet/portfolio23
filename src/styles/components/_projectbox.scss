@@ -1,11 +1,83 @@
 
-.project-box {
+.project-overlay {
     position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(77, 77, 67, 0.482);
+top: 0;
+    display: flex;
+  align-items: center;
+}
+
+.project-box {
     background-color: beige;
-    height: 80vh;
-    top: 0;
-    width: 80%;
-    max-width: 1500px;
+    width: 50%;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem;
+    border-radius: 30px;
+
+    .close-modal-button {
+        position: sticky;
+        left: calc(100% - 40px);
+        height: 40px;
+        width: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        /* color: #fff; */
+        background: rgb(170, 105, 105);
+        /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+        /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+        transition: all 0.3s ease-in-out;
+
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 1px);
+            left: 30%;
+            width: 40%;
+            border-bottom: 2px solid #ffffff;
+            transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+    }
+
+    
+    .project-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 100px;
+
+        img {
+            width: 30%;
+            object-fit: contain;
+        }
+    }
+
+    h2 {
+        font-family: "Cabinet Grotesk", sans-serif;
+        font-size: clampRem(16, 22, $bp-mobile, $bp-regular);
+        font-variation-settings: "wght" 300;
+        margin: 0rem 0 2.5rem 0;
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: "Cabinet Grotesk", sans-serif;
+        font-size: clampRem(14, 18, $bp-mobile, $bp-regular);
+        font-variation-settings: "wght" 300;
+    }
 }
