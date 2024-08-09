@@ -49,6 +49,11 @@
     .gallery-item {
         width: calc(100% / 3 - 10px);
         min-width: 200px;
+        border: none;
+        cursor: pointer;
+        background: none;
+
+    
     }
 
     .gallery-item-img {

@@ -1,7 +1,9 @@
 import React from "react";
+import { useState, useEffect } from "react";
+
 
 function getDefaultTheme() {
-  const savedTheme = window.localStorage.getItem("theme");
+  const savedTheme = localStorage.getItem("theme");
   return savedTheme ? savedTheme : "light";
 }
 
@@ -15,9 +17,28 @@ function remove_display(target) {
 }
 
 export default function DarkMode() {
-  const [isDark, setIsDark] = React.useState(getDefaultTheme());
+  const [isDark, setIsDark] = useState();
 
-  React.useEffect(() => {
+  useEffect(() => {
+    // storing input name
+    localStorage.getItem("theme", isDark);
+  }, [isDark]);
+
+  /* const [isDark, setIsDark] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem("theme");
+    const initialValue = saved;
+    return initialValue || "";
+  }); */
+
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem("theme", isDark);
+  }, [isDark]);
+
+  
+
+  useEffect(() => {
     let lightray = document.querySelector(".lightray");
     let clouds = document.querySelectorAll(".clouds");
     let moon = document.querySelector(".moon");
@@ -53,7 +74,11 @@ export default function DarkMode() {
       }
 
     }
-    window.localStorage.setItem("theme", isDark);
+    //localStorage.setItem("theme", isDark);
+
+
+
+
   }, [isDark]);
 
   return (

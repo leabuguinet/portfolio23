@@ -29,6 +29,18 @@ li {
   }
 }
 
+a.active li {
+  font-variation-settings: "wght" 500;
+  letter-spacing: 1px;
+  text-shadow: 2px 5px var(--nav-hover);
+
+  span {
+    opacity: 1;
+    text-shadow: none;
+  }
+  
+}
+
 li:hover {
   font-variation-settings: "wght" 500;
   letter-spacing: 1px;

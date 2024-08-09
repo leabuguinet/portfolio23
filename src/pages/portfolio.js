@@ -50,7 +50,7 @@ const Portfolio = ({ location }) => {
 
 
   const item = {
-    hidden: { y: 20, height: "10px", opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       height: "100%",

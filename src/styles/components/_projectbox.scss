@@ -10,7 +10,7 @@ top: 0;
 }
 
 .project-box {
-    background-color: beige;
+    background-color: white;
     width: 50%;
     max-width: 1000px;
     margin: 0 auto;
@@ -67,9 +67,9 @@ top: 0;
 
     h2 {
         font-family: "Cabinet Grotesk", sans-serif;
-        font-size: clampRem(16, 22, $bp-mobile, $bp-regular);
-        font-variation-settings: "wght" 300;
-        margin: 0rem 0 2.5rem 0;
+        font-size: clampRem(16, 26, $bp-mobile, $bp-regular);
+        font-variation-settings: "wght" 500;
+        margin: 0rem 0 1.5rem 0;
         position: relative;
         z-index: 2;
         text-transform: uppercase;
@@ -79,5 +79,73 @@ top: 0;
         font-family: "Cabinet Grotesk", sans-serif;
         font-size: clampRem(14, 18, $bp-mobile, $bp-regular);
         font-variation-settings: "wght" 300;
+        margin: 1rem 0;
+    }
+
+    .project-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
+
+.button {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: blue;
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: .75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color .3s;
+
+    font-family: "Cabinet Grotesk", sans-serif;
+        font-size: clampRem(14, 18, $bp-mobile, $bp-regular);
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--clr);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    background-color: #000;
+  }
+  
+  .button:hover .button__icon-wrapper {
+    color: #000;
+  }
+
+  .button__icon-svg {
+    color: black;
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .button__icon-svg:first-child {
+    transition: transform .3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .button__icon-svg--copy {
+    transition: transform .3s ease-in-out .1s;
+    transform: translate(0);
+  }

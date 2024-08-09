@@ -18,9 +18,10 @@ const Portrait = () => {
   let hoverSmile;
   let hoverHeadtop;
   let hoverHeadright;
+/*   let windowWidth = window.innerWidth;
 
   //if character looks up
-  if (window.innerWidth > 1024){
+  if (windowWidth > 1024){
     hoverEyes = {
       top: isHover ? '-5px' : '0px',
     }
@@ -43,7 +44,7 @@ const Portrait = () => {
     hoverHeadtop = {
       background: isHover ? 'none' : null,
     }
-  }
+  } */
 
 
   const hoverHead = {
