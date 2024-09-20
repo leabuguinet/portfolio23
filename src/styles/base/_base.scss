@@ -5,17 +5,29 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    
+
+
+    --red: #A36361; 
+    --pink: #D3A29D;
+    --orange: #E8B298;
+    --yellow: #EECC8C;
+    --green: #BDD1C5;
+    --dark-green: #9EABA2;
 } 
+
+
+
 
 
 body {
     
     --home-bg: #e4eed3;
     --home-bg: #e5b597;
+    --home-bg: #E8B298;
     --home-bg-night: #2c2a3d;
     --about-bg: #edcb87;
-    --mentions-bg: #c6ebb9;
+    --about-bg: #EECC8C;
+    --mentions-bg: #D3A29D;
 
     --sky: #d6eaf8;
     --sky-night: #0b0728;
@@ -70,4 +82,3 @@ body.dark {
 .displayblock {
     display: block !important;
 }
-

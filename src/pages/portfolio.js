@@ -6,7 +6,7 @@ import Nav from "../components/nav";
 
 import ProjectBox from "../components/projectbox";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Project1 from "../assets/jpg/karabafc.png";
 import Project2 from "../assets/jpg/ajmariage.png";
@@ -23,18 +23,26 @@ const numbers = [Project1, Project2, Project3, Project4, Project5, Project6];
 let indexproject;
 
 const Portfolio = ({ location }) => {
-
   const pageUrl = location.pathname;
   const [showProject, setShowProject] = useState(false);
 
   function openModal(index) {
     indexproject = index;
     setShowProject(!showProject);
-    let body = document.querySelector('body');
-    body.classList.add('overflow')
-}
+    let body = document.querySelector("body");
+    body.classList.add("overflow");
+  }
+
+  function closeModal() {
+    setShowProject(false);
+    let body = document.querySelector("body");
+    body.classList.remove("overflow");
+  }
 
 
+  const toggleVisibility = () => {
+    setShowProject(!showProject);
+  };
 
   const container = {
     hidden: { opacity: 0 },
@@ -47,8 +55,6 @@ const Portfolio = ({ location }) => {
     },
   };
 
-
-
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -60,17 +66,16 @@ const Portfolio = ({ location }) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
-      const position = window.scrollY;
-      setScrollPosition(position);
-
+    const position = window.scrollY;
+    setScrollPosition(position);
   };
-  
-  useEffect(() => {
-      window.addEventListener('scroll', handleScroll, { passive: true });
 
-      return () => {
-          window.removeEventListener('scroll', handleScroll);
-      };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -89,14 +94,12 @@ const Portfolio = ({ location }) => {
             >
               {[0, 1, 2, 3, 4, 5].map((index) => (
                 <motion.button
-                
                   key={index}
                   className="gallery-item"
                   variants={item}
                   style={{ originX: 0, originZ: 0 }}
                   onClick={() => openModal(index)}
                   index={index}
-
                 >
                   <motion.img
                     variants={item}
@@ -105,14 +108,33 @@ const Portfolio = ({ location }) => {
                   ></motion.img>
                 </motion.button>
               ))}
-
-              
             </motion.div>
-            
           </div>
         </div>
-        {showProject && <ProjectBox setShowProject={setShowProject} index={indexproject} scrollPosition={scrollPosition}/>}
 
+
+        <AnimatePresence>
+        {showProject && (
+          <motion.div
+          className="project-overlay"
+            key="modal"
+            initial={{ opacity: 0, top: scrollPosition }}
+            animate={{ opacity: 1, top: scrollPosition}}
+            exit={{ opacity: 0 }}
+            style={{top: scrollPosition}}
+            onClick={() => closeModal()}
+          >
+            <ProjectBox          showProject={setShowProject}
+          setShowProject={setShowProject}
+          index={indexproject}
+          scrollPosition={scrollPosition}  ></ProjectBox>
+            </motion.div>
+        )}
+      </AnimatePresence>
+
+     
+     
+    
       </Layout>
     </>
   );
