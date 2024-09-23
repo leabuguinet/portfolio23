@@ -214,9 +214,9 @@ const Apropos = ({ location }) => {
                 <p>- Lire des livres et des BD</p>
                 <p>- Aller au cinéma</p>
                 <p>- Voir des concerts</p>
-                <p>- Faire de l'aquarelle</p>
+                <p>- Gribouiller</p>
                 <p>- Jouer</p>
-                <p>- Les ours</p>
+
               
               </section>
             </div>

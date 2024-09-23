@@ -39,7 +39,6 @@ const Portfolio = ({ location }) => {
     body.classList.remove("overflow");
   }
 
-
   const toggleVisibility = () => {
     setShowProject(!showProject);
   };
@@ -112,29 +111,26 @@ const Portfolio = ({ location }) => {
           </div>
         </div>
 
-
         <AnimatePresence>
-        {showProject && (
-          <motion.div
-          className="project-overlay"
-            key="modal"
-            initial={{ opacity: 0, top: scrollPosition }}
-            animate={{ opacity: 1, top: scrollPosition}}
-            exit={{ opacity: 0 }}
-            style={{top: scrollPosition}}
-            onClick={() => closeModal()}
-          >
-            <ProjectBox          showProject={setShowProject}
-          setShowProject={setShowProject}
-          index={indexproject}
-          scrollPosition={scrollPosition}  ></ProjectBox>
+          {showProject && (
+            <motion.div
+              className="project-overlay"
+              key="modal"
+              initial={{ opacity: 0, top: scrollPosition }}
+              animate={{ opacity: 1, top: scrollPosition }}
+              exit={{ opacity: 0 }}
+              style={{ top: scrollPosition }}
+              onClick={() => closeModal()}
+            >
+              <ProjectBox
+                showProject={setShowProject}
+                setShowProject={setShowProject}
+                index={indexproject}
+                scrollPosition={scrollPosition}
+              ></ProjectBox>
             </motion.div>
-        )}
-      </AnimatePresence>
-
-     
-     
-    
+          )}
+        </AnimatePresence>
       </Layout>
     </>
   );

@@ -21,7 +21,11 @@ export default function ProjectBox({
 
   return (
 
-    <div className="project-box">
+    <motion.div className="project-box"
+    initial={{ opacity: 0, top: scrollPosition, y: -100 }}
+    animate={{ opacity: 1, top: scrollPosition, y: 0}}
+    exit={{ y: 200 }}
+    >
       <div className="project-content">
         <h2>{dataProject[index].title}</h2>
         <div
@@ -43,6 +47,7 @@ export default function ProjectBox({
               className="button"
               target="_blank"
               href={dataProject[index].link}
+              style={{ 'background': dataProject[index].bgcolor, 'color': dataProject[index].color, }}
             >
               <span className="button__icon-wrapper">
                 <Fleche />
@@ -55,7 +60,7 @@ export default function ProjectBox({
         </div>
         <img src={"" + dataProject[index].img} />
       </div>
-    </div>
+    </motion.div>
   /* </div> */
   );
 }

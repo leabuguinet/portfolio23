@@ -6,60 +6,72 @@
         "description":"Design, développement et maintenance d'un site vitrine pour un groupe de musique. Affichage dynamique des dates de concert passées et à venir. Mise en avant des nouveaux titres et mise à jour du merch.",
         "technologies": "React - Gatsby - JS - SASS - Framer Motion",
         "year": "2022 - 2024",
-        "link":"https://www.karabafc.com/"
+        "link":"https://www.karabafc.com/",
+        "bgcolor": "#755b76",
+        "color": "white"
 
     }, 
     {
         "id": "1",
         "title": "A&J",
-        "img": "/images/aprildancer-artwork.jpeg",
+        "img": "/static/ajmariage-fd31528b6d93866a48b5a0656b5fcd24.png",
         "description":"Design et développement d'un site pour un mariage. Accessible via un QR code sur les invitations. Affichage du déroulé du jour J et informations pratiques",
         "technologies": "PHP - SASS - GSAP",
         "year": "2023",
-        "link":"https://www.anais-jeremy-guest.leabugui.net/"
+        "link":"https://www.anais-jeremy-guest.leabugui.net/",
+        "bgcolor": "#07350f",
+        "color": "white"
 
 
     },
     {
         "id": "2",
         "title": "Daily Orsay",
-        "img": "/images/aprildancer-artwork.jpeg",
+        "img": "/static/dailyorsay-3bde2e7f2921f22385569e90090cf748.png",
         "description":"Projet personnel utilisant l'API Images d'Art de la Rmn-Grand Palais. L'idée est de proposer aléatoirement chaque jour un tableau, une scuplture et une photographie faisant partie de la collection du Musée d'Orsay. Refonte du design en 2024",
         "technologies": "PHP - SASS - GSAP",
         "year": "2023-2024",
-        "link":"https://www.dailyorsay.leabugui.net/"
+        "link":"https://www.dailyorsay.leabugui.net/",
+        "bgcolor": "#1c1b1c",
+        "color": "white"
 
 
     },
     {
         "id": "3",
         "title": "Archipel Contact",
-        "img": "/images/aprildancer-artwork.jpeg",
+        "img": "/static/archipelcontact-45c805c9de20d90666e9bf78f88fc616.png",
         "description":"Design et développement de la refonte complète du site Archipel Contact, une agence de voyage B2B, spécialisée dans l'Indonésie. Un back-office sur-mesure permet de mettre à jour les voyages proposés.",
         "technologies": "Symfony - SASS - JS",
         "year": "2021",
-        "link":"https://archipel-contact.com/"
+        "link":"https://archipel-contact.com/",
+        "bgcolor": "#310249",
+        "color": "white"
 
     },
     {
         "id": "4",
         "title": "Les Grands Espaces",
-        "img": "/images/aprildancer-artwork.jpeg",
+        "img": "/static/lesgrandsespaces-ab8ea36dfaa61225a93cc7b87085d87d.png",
         "description":"Refonte du site pour une association d'éducation à l'image, en partenariat avec une illustratrice.",
         "technologies": "Wordpress - SASS - JS",
         "year": "2022",
-        "link":"https://les-grands-espaces.net/"
+        "link":"https://les-grands-espaces.net/",
+        "bgcolor": "#d62020",
+        "color": "white"
 
 
     },
     {
         "id": "5",
         "title": "ProCATination Game",
-        "img": "/images/aprildancer-artwork.jpeg",
+        "img": "/static/procatination-5563829b58793065b551dc48e229116d.png",
         "description":"Un petit jeu pierre-feuille-ciseaux contre un chat, qui décidera si vous avez le droit de procrastiner.",
         "technologies": "React - Material UI",
         "year": "2021",
-        "link":"https://www.procatination.leabugui.net/"
+        "link":"https://www.procatination.leabugui.net/",
+        "bgcolor": "#ffe000",
+        "color": "black"
 
     }
 

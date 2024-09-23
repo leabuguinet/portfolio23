@@ -43,7 +43,7 @@ const Layout = ({ children, pageUrl }) => {
 
       {motionMain}
 
-      <Footer />
+      <Footer pageUrl={pageUrl}/>
     </>
   )
 }

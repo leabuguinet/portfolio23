@@ -5,7 +5,7 @@
     background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, #066b21 0%, #edffd1 35%, #e4e4d9 100%);  
     background: url('../assets/svg/noise-light.png'), var(--about-bg);
     //background-image: url('../assets/svg/noise-light.png');
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     //overflow: hidden;
     overflow: clip;
 
@@ -45,7 +45,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 50px;
-    margin-bottom: 12rem;
+    margin-bottom: 4rem;
     @include max($bp-small-px){
         padding: 25px;
     }

@@ -4,7 +4,7 @@
     background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, #A36361 0%, #D3A29D 15%,#E8B298 35%, #EECC8C 100%);  
     //background-image: url('../assets/svg/noise-light.png');
     //background: #BDD1C5;
-    margin-bottom: 12rem;
+
 
     .nav-container {
         height: fit-content;
@@ -37,7 +37,7 @@
 
     .gallery {
         align-items: center;
-        min-height: 100vh;
+        //min-height: 100vh;
         margin: 0 auto;
         display: flex;
         justify-content: center;

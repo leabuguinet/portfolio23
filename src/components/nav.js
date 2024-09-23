@@ -18,12 +18,13 @@ const Nav = ({ pageUrl }) => {
     homepageLink = ""
   }
 
+
   return (
     <>
         <div className="nav-container">
         <ul>
         {homepageLink}
-        <Link activeClassName="active" to="/portfolio"><li><span>&#10077;</span>Portfolio</li></Link>
+        <Link activeClassName="active" to="/portfolio" ><li><span>&#10077;</span>Portfolio</li></Link>
         <a href="/apropos"><li><span>&#10022;</span>Codepen</li></a>
         <Link activeClassName="active" to="/apropos"><li><span>&#10077;</span>À propos</li></Link>
         </ul>
