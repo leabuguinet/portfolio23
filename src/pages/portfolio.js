@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Layout from "../components/layout";
 import Nav from "../components/nav";
 
+import Footer from "../components/footer";
 import ProjectBox from "../components/projectbox";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,6 +26,9 @@ let indexproject;
 const Portfolio = ({ location }) => {
   const pageUrl = location.pathname;
   const [showProject, setShowProject] = useState(false);
+
+  let footerColor = "#A36361";
+  let footerPadding = "4rem 0"
 
   function openModal(index) {
     indexproject = index;
@@ -131,7 +135,10 @@ const Portfolio = ({ location }) => {
             </motion.div>
           )}
         </AnimatePresence>
+
+
       </Layout>
+      <Footer footerColor={footerColor} footerPadding={footerPadding} />
     </>
   );
 };

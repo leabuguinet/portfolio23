@@ -5,13 +5,13 @@ import Window from "../components/window"
 import Nav from "../components/nav"
 import "../styles/main.scss"
 import DarkMode from "../components/darkmodetoggle"
+import Footer from "../components/footer"
 
 //import { Head } from "../components/head"
 
-const Index = ({ location }) => {
+const Index = ({ pageUrl }) => {
 
-  const pageUrl = location.pathname;
-
+  let footerColor = "#E8B298";
 
   return (
 
@@ -28,6 +28,8 @@ const Index = ({ location }) => {
         </div>
 
     </Layout>
+    <Footer footerColor={footerColor} />
+
     </>
   )
 }

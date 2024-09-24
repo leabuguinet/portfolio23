@@ -33,8 +33,8 @@ const NavBurgerButton = ({ pageUrl }) => {
 
       }}/>
 
-      <label for="active" className="menu-btn" htmlFor="active"><span></span></label>
-      <label for="active" className="close" htmlFor="active"></label>
+      <label  className="menu-btn" htmlFor="active"><span></span></label>
+      <label  className="close" htmlFor="active"></label>
 
 </div>
 

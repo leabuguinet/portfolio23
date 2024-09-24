@@ -2,9 +2,14 @@ import React from "react";
 import Layout from "../components/layout";
 import Nav from "../components/nav";
 import NavBurgerButton from "../components/nav-burger-button";
+import Footer from "../components/footer";
 
 const Mentions = ({ location }) => {
   const pageUrl = location.pathname;
+
+  let footerColor = "#A36361";
+  let footerPadding = "0rem 0"
+
 
   return (
     <>
@@ -79,6 +84,7 @@ const Mentions = ({ location }) => {
 
         
       </Layout>
+      <Footer footerColor={footerColor} footerPadding={footerPadding} />
     </>
   );
 };

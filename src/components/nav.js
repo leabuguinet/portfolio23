@@ -25,7 +25,7 @@ const Nav = ({ pageUrl }) => {
         <ul>
         {homepageLink}
         <Link activeClassName="active" to="/portfolio" ><li><span>&#10077;</span>Portfolio</li></Link>
-        <a href="/apropos"><li><span>&#10022;</span>Codepen</li></a>
+        <a href="https://codepen.io/leabuguinet" target="_blank"><li><span>&#10022;</span>Codepen</li></a>
         <Link activeClassName="active" to="/apropos"><li><span>&#10077;</span>À propos</li></Link>
         </ul>
         </div>

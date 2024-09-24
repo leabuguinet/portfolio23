@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Nav from "../components/nav";
-
+import Footer from "../components/footer";
 
 //import { Head } from "../components/head"
 
@@ -22,10 +22,13 @@ const Apropos = ({ location }) => {
 
   const pageUrl = location.pathname;
 
+  let footerColor = "#819688";
+  let footerPadding = "4rem 0"
+
   return (
     <>
 
-    <Layout>
+    <Layout pageUrl={pageUrl}>
 
       <div className="about-container">
 
@@ -227,6 +230,7 @@ const Apropos = ({ location }) => {
 
       
     </Layout>
+    <Footer footerColor={footerColor} footerPadding={footerPadding} />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 
 import Github from '../assets/svg/github.inline.svg';
@@ -8,22 +8,10 @@ import Telegram from '../assets/svg/telegram.inline.svg';
 
 
 
-const Footer = ({ pageUrl }) => {
+const Footer = ({ footerColor, footerPadding }) => {
 
-  let footerColor;
-  let footerPadding;
-  
-  if(pageUrl == "/portfolio/"){
-    footerColor = "#A36361";
-    footerPadding = "4rem 0"
-  } else if (pageUrl == "/apropos/") {
-    footerColor = "#819688";
-    footerPadding = "4rem 0"
-  } else {
-    footerColor = "#E8B298";
-    footerPadding = "0rem 0"
-  }
 
+ 
   return (
     <footer className="footer" style={{'background': footerColor, 'padding': footerPadding}}>
 
@@ -42,3 +30,4 @@ const Footer = ({ pageUrl }) => {
 }
 
 export default Footer 
+

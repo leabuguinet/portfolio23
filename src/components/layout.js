@@ -1,6 +1,4 @@
-import React from "react"
-import Header from "./header"
-import Footer from "./footer"
+import React, {useState} from "react"
 import { motion } from "framer-motion"
 //import "../styles/style.scss"
 
@@ -14,9 +12,8 @@ const Layout = ({ children, pageUrl }) => {
     isIndexPage = true;
   }
 
-
   if(isIndexPage === true){
-    motionMain = <motion.main initial= {{ opacity: 0, y: '-100%'}}
+    motionMain = <><motion.main initial= {{ opacity: 0, y: '-100%'}}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 1, y: '-100%' }}
     transition={{
@@ -24,9 +21,9 @@ const Layout = ({ children, pageUrl }) => {
       mass: 0.35,
       stiffness: 75,
     }}>{children}
-    </motion.main>
+    </motion.main></>
   } else {
-    motionMain = <motion.main initial= {{ opacity: 1, y: '100%'}}
+    motionMain = <><motion.main initial= {{ opacity: 1, y: '100%'}}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 1, y: '100%' }}
     transition={{
@@ -34,16 +31,17 @@ const Layout = ({ children, pageUrl }) => {
       mass: 0.35,
       stiffness: 75,
     }}>{children}
-    </motion.main>
+    </motion.main></>
   }
+
 
   return (
     <>
       {/* <Header /> */}
 
       {motionMain}
-
-      <Footer pageUrl={pageUrl}/>
+      
+      
     </>
   )
 }
