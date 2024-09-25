@@ -5,7 +5,7 @@
   top: 75%;
   right: 90%;
   width: 100%;
-  z-index: 5;
+  z-index: 16;
 
   @include min($bp-tablet-px){
     display: none;
@@ -20,7 +20,7 @@
   width: 100%;
   transition: all 0.3s ease-in-out;
   transform: translate(90%);
-  z-index: 5;
+  z-index: 15;
 
 
   @include min($bp-tablet-px){
@@ -47,6 +47,7 @@
   
   li {
     z-index: 6;
+    padding-bottom: 2rem;
   }
 
 }

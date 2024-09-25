@@ -19,11 +19,12 @@ export default function ProjectBox({
     body.classList.remove("overflow");
   }
 
+
   return (
 
     <motion.div className="project-box"
-    initial={{ opacity: 0, top: scrollPosition, y: -100 }}
-    animate={{ opacity: 1, top: scrollPosition, y: 0}}
+    initial={{ opacity: 0, top: scrollPosition, y: -100, zIndex: 1000 }}
+    animate={{ opacity: 1, top: scrollPosition, y: 0, zIndex: 1000}}
     exit={{ y: 200 }}
     >
       <div className="project-content">
