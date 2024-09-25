@@ -21,9 +21,9 @@ import NavBurgerButton from "../components/nav-burger-button";
 const Apropos = ({ location }) => {
 
   const pageUrl = location.pathname;
-
+  let homePage = false;
   let footerColor = "#819688";
-  let footerPadding = "4rem 0"
+  let footerPadding = "4rem 0";
 
   return (
     <>
@@ -34,7 +34,7 @@ const Apropos = ({ location }) => {
 
       <NavBurgerButton />
 
-      <Nav pageUrl={pageUrl}></Nav>
+      <Nav homePage={homePage}></Nav>
       
         <div className="about-content">
           <div className="pilea-container">

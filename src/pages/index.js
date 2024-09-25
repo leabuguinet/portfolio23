@@ -12,6 +12,7 @@ import Footer from "../components/footer"
 const Index = ({ pageUrl }) => {
 
   let footerColor = "#E8B298";
+  let homePage = true;
 
   return (
 
@@ -22,7 +23,7 @@ const Index = ({ pageUrl }) => {
         <div className="homepage-container">
         <Portrait></Portrait>
         <Window></Window>
-        <Nav pageUrl={pageUrl}></Nav>
+        <Nav homePage={homePage}></Nav>
 
 
         </div>

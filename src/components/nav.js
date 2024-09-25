@@ -2,17 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 
 
-const Nav = ({ pageUrl }) => {
+const Nav = ({ homePage }) => {
   
 
-  let isIndexPage = false;
+  /* let isIndexPage = false;
   let homepageLink ;
 
   if (pageUrl === "/" || pageUrl === ""){
     isIndexPage = true;
-  }
+  } */
+
+  let homepageLink;
   
-  if(isIndexPage === false){
+  if(homePage === false){
     homepageLink = <Link activeClassName="active" to="/"><li><span>&#10047;</span>Accueil</li></Link>
   } else {
     homepageLink = ""
@@ -25,7 +27,7 @@ const Nav = ({ pageUrl }) => {
         <ul>
         {homepageLink}
         <Link activeClassName="active" to="/portfolio" ><li><span>&#10077;</span>Portfolio</li></Link>
-        <a href="https://codepen.io/leabuguinet" target="_blank"><li><span>&#10022;</span>Codepen</li></a>
+        <a href="https://codepen.io/leabuguinet" target="_blank" rel="noreferrer"><li><span>&#10022;</span>Codepen</li></a>
         <Link activeClassName="active" to="/apropos"><li><span>&#10077;</span>À propos</li></Link>
         </ul>
         </div>

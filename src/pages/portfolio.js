@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import Nav from "../components/nav";
 
@@ -15,7 +15,7 @@ import Project3 from "../assets/jpg/dailyorsay.png";
 import Project4 from "../assets/jpg/archipelcontact.png";
 import Project5 from "../assets/jpg/lesgrandsespaces.png";
 import Project6 from "../assets/jpg/procatination.png";
-import Project7 from "../assets/jpg/procatination.png";
+//import Project7 from "../assets/jpg/procatination.png";
 
 import NavBurgerButton from "../components/nav-burger-button";
 //import ProjectBox from "../components/projectbox";
@@ -26,7 +26,7 @@ let indexproject;
 const Portfolio = ({ location }) => {
   const pageUrl = location.pathname;
   const [showProject, setShowProject] = useState(false);
-
+  let homePage = false;
   let footerColor = "#A36361";
   let footerPadding = "4rem 0"
 
@@ -86,7 +86,7 @@ const Portfolio = ({ location }) => {
       <Layout>
         <div className="portfolio-container">
           <NavBurgerButton />
-          <Nav pageUrl={pageUrl}></Nav>
+          <Nav homePage={homePage}></Nav>
 
           <div className="portfolio-content">
             <motion.div

@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 
 const Mentions = ({ location }) => {
   const pageUrl = location.pathname;
-
+  let homePage = false;
   let footerColor = "#A36361";
   let footerPadding = "0rem 0"
 
@@ -17,7 +17,7 @@ const Mentions = ({ location }) => {
         <div className="mentions-container">
           <NavBurgerButton />
 
-          <Nav pageUrl={pageUrl}></Nav>
+          <Nav homePage={homePage}></Nav>
 
           <div className="mentions-content">
             <div>
