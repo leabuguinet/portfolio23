@@ -1,7 +1,7 @@
 
 .portfolio-container {
     
-    background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, #A36361 0%, #D3A29D 15%,#E8B298 35%, #EECC8C 100%);  
+    background: url('../assets/svg/noise-light.png'), linear-gradient(161deg, var(--red) 0%, var(--pink) 15%,var(--orange) 35%, var(--yellow) 100%);  
     //background-image: url('../assets/svg/noise-light.png');
     //background: #BDD1C5;
 
@@ -60,6 +60,12 @@
     .gallery-item-img {
         height: auto;
         width: 100%;
+
+        
+    }
+
+    .gallery-item-img-darkmode {
+        filter: brightness(0.8);
     }
     
 }

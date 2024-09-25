@@ -84,7 +84,7 @@ const Mentions = ({ location }) => {
 
         
       </Layout>
-      <Footer footerColor={footerColor} footerPadding={footerPadding} />
+      <Footer footerColor={footerColor} footerPadding={footerPadding} homePage={homePage} />
     </>
   );
 };

@@ -22,14 +22,14 @@ const Index = ({ pageUrl }) => {
     <Layout pageUrl={pageUrl}>
         <div className="homepage-container">
         <Portrait></Portrait>
-        <Window></Window>
+        <Window homePage={homePage}> </Window>
         <Nav homePage={homePage}></Nav>
 
 
         </div>
 
     </Layout>
-    <Footer footerColor={footerColor} />
+    <Footer footerColor={footerColor} homePage={homePage} />
 
     </>
   )

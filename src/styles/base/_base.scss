@@ -7,12 +7,7 @@
     scroll-behavior: smooth;
 
 
-    --red: #A36361; 
-    --pink: #D3A29D;
-    --orange: #E8B298;
-    --yellow: #EECC8C;
-    --green: #BDD1C5;
-    --dark-green: #819688;
+
 } 
 
 
@@ -47,6 +42,14 @@ body {
     --clouds: #ffffff;
 
     --paper: #ffffff;
+    --projectbox-bg: #ffffff;
+
+    --red: #A36361; 
+    --pink: #D3A29D;
+    --orange: #E8B298;
+    --yellow: #EECC8C;
+    --green: #BDD1C5;
+    --dark-green: #819688;
 
     
 //overflow: unset !important;
@@ -56,7 +59,7 @@ body {
 body.dark {
     --home-bg: #2c2a3d;
     --about-bg: #131327;
-    --mentions-bg: #032105;
+    --mentions-bg: #040414;
     
     --sky: #0b0728;
     --purpleburgandy: #39385a;
@@ -67,6 +70,14 @@ body.dark {
     color: #e5b597;
 
     --paper: #14152b;
+    --projectbox-bg: #14152b;
+
+    --red: #131327; 
+    --pink: #2c2a3d;
+    --orange: #393657;
+    --yellow: #393657;
+    --green: #BDD1C5;
+    --dark-green: #819688;
 }
 
 

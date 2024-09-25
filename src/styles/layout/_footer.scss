@@ -24,7 +24,6 @@ footer {
         }
 
         a:hover svg {
-            fill: #5cce7e;
             fill:  rgba(255, 255, 255, 0.667);
         }
     }
@@ -36,8 +35,19 @@ footer {
         right: 10px;
         bottom: 10px;
     }
+
+    .darkmodetoggle {
+        width: 10px;
+        height: 10px;
+        background-color: #5cce7e;
+    }
+
+
 }
 
+.home-dark-footer {
+    background-color: var(--home-bg-night) !important;
+}
 
 
  

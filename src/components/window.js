@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import DarkMode from "./darkmodetoggle";
 
-const Window = () => {
+const Window = ({ homePage }) => {
 
   return (
     <>
@@ -11,7 +11,7 @@ const Window = () => {
         <div className="lamp-container">
           <div className="top-lamp"></div>
           {/* <div className="lamp" onMouseDown={handleMouseDown}></div> */}
-          <DarkMode></DarkMode>
+          <DarkMode homePage={homePage}></DarkMode>
           <div className="lightray"></div>
 
         </div>
