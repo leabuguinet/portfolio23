@@ -29,7 +29,7 @@ const Index = ({ pageUrl }) => {
         </div>
 
     </Layout>
-    <Footer footerColor={footerColor} homePage={homePage} />
+    <Footer footerColor={footerColor} homePage={homePage} isFooter={true} />
 
     </>
   )

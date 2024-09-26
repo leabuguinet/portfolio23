@@ -23,7 +23,7 @@ const Apropos = ({ location }) => {
   const pageUrl = location.pathname;
   let homePage = false;
   let footerColor = "#819688";
-  let footerPadding = "4rem 0";
+  let footerPadding = "4rem 0 1rem 0";
 
   return (
     <>

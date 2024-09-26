@@ -16,19 +16,22 @@ const Footer = ({ footerColor, footerPadding, homePage }) => {
   return (
     <footer className="footer" style={{'background': footerColor, 'padding': footerPadding}}>
 
+  
+
       <div className='footer-logos'>
         
         <a aria-label="Github" href='https://github.com/leabuguinet'><Github /></a>
         <a aria-label="Linkedin" href='https://www.linkedin.com/in/l%C3%A9a-buguinet-050642135/'><Linkedin /></a>
         <a aria-label="Mail" href='mailto:lea.buguinet@gmail.com'><Mail /></a>
         <a aria-label="Telegram" href='https://t.me/lleab'><Telegram /></a>
-        <DarkMode homePage={homePage}/>
+        
 
       </div>
 
-      
+      <div className="footer-misc">
+      <DarkMode homePage={homePage}/>
       <Link activeClassName="active" className="mention-link" to="/mentions">Mentions</Link>
-
+      </div>
     </footer>
   )
 }

@@ -67,7 +67,7 @@
   position: relative;
   z-index: 0;
   overflow: hidden;
-  border: 5px rgb(255, 213, 165) solid;
+  border: 5px #ffd5a5 solid;
 
   &:hover .left-eye::before,
   &:hover .right-eye::before {

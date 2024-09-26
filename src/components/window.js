@@ -11,7 +11,7 @@ const Window = ({ homePage }) => {
         <div className="lamp-container">
           <div className="top-lamp"></div>
           {/* <div className="lamp" onMouseDown={handleMouseDown}></div> */}
-          <DarkMode homePage={homePage}></DarkMode>
+          <DarkMode homePage={homePage} isFooter={false}></DarkMode>
           <div className="lightray"></div>
 
         </div>

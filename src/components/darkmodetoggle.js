@@ -10,7 +10,7 @@ function remove_display(target) {
   target.classList.remove("displayblock");
 }
 
-export default function DarkMode({ homePage }) {
+export default function DarkMode({ homePage, isFooter }) {
   //const [isDark, setIsDark] = useState();
   const [isDark, setIsDark] = useState();
 
@@ -36,8 +36,6 @@ export default function DarkMode({ homePage }) {
   };
 
   useEffect(() => {
-
-
     /* GENERAL */
     if (isDark === true) {
       document.body.classList.add("dark");
@@ -55,9 +53,7 @@ export default function DarkMode({ homePage }) {
       let star3 = document.querySelector(".star-3");
       let footer = document.querySelector(".footer");
 
-
       if (isDark === true) {
-
         footer.classList.add("home-dark-footer");
 
         //Sky
@@ -70,7 +66,6 @@ export default function DarkMode({ homePage }) {
           clouds[c].classList.add("displaynone");
         }
       } else {
-
         footer.classList.remove("home-dark-footer");
 
         //Sky
@@ -89,7 +84,6 @@ export default function DarkMode({ homePage }) {
     if (document.querySelector(".about-container")) {
       let footer = document.querySelector(".footer");
 
-
       if (isDark === true) {
         footer.classList.add("home-dark-footer");
       } else {
@@ -101,19 +95,15 @@ export default function DarkMode({ homePage }) {
     if (document.querySelector(".portfolio-container")) {
       let footer = document.querySelector(".footer");
       let galleryImgs = document.querySelectorAll(".gallery-item-img");
-     
 
       if (isDark === true) {
         footer.classList.add("home-dark-footer");
-       
 
         for (let g = 0; g < galleryImgs.length; g++) {
           galleryImgs[g].classList.add("gallery-item-img-darkmode");
         }
-
       } else {
         footer.classList.remove("home-dark-footer");
-
 
         for (let g = 0; g < galleryImgs.length; g++) {
           galleryImgs[g].classList.remove("gallery-item-img-darkmode");
@@ -125,16 +115,44 @@ export default function DarkMode({ homePage }) {
     if (document.querySelector(".mentions-container")) {
       let footer = document.querySelector(".footer");
 
-
       if (isDark === true) {
         footer.classList.add("home-dark-footer");
       } else {
         footer.classList.remove("home-dark-footer");
       }
     }
-
-
   }, [isDark]);
 
-  return <button className={homePage === true ? `lamp` : `darkmodetoggle`} onClick={changeLightMode}></button>;
+  //return <button className={homePage === true ? `lamp` : `darkmodetoggle`} onClick={changeLightMode}></button>;
+
+  if (homePage === true && isFooter === false) {
+    return <button className="lamp" onClick={changeLightMode}></button>;
+  } else {
+    return (
+      <>
+        {/* <button className="darkmodetoggle" onClick={changeLightMode}></button> */}
+
+        <label className="toggle-container">
+          <input class="toggle-checkbox" type="checkbox" checked={isDark} onClick={changeLightMode}></input>
+          <div class="toggle-slot">
+            <div class="sun-icon-wrapper">
+              <div
+                class="iconify sun-icon"
+                data-icon="feather-sun"
+                data-inline="false"
+              ></div>
+            </div>
+            <div class="toggle-button"></div>
+            <div class="moon-icon-wrapper">
+              <div
+                class="iconify moon-icon"
+                data-icon="feather-moon"
+                data-inline="false"
+              ></div>
+            </div>
+          </div>
+        </label>
+      </>
+    );
+  }
 }
