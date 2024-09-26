@@ -2,7 +2,7 @@
     {
         "id": "0",
         "title": "Karaba F.C.",
-        "img": "/static/karabafc-d2844ac4898a9b3d759d6ca057ec5577.png",
+        "img": "karabafc",
         "description":"Design, développement et maintenance d'un site vitrine pour un groupe de musique. Affichage dynamique des dates de concert passées et à venir. Mise en avant des nouveaux titres et mise à jour du merch.",
         "technologies": "React - Gatsby - JS - SASS - Framer Motion",
         "year": "2022 - 2024",
@@ -14,7 +14,7 @@
     {
         "id": "1",
         "title": "A&J",
-        "img": "/static/ajmariage-d90de6da8ab4992bc846cadebf261a8b.png",
+        "img": "ajmariage",
         "description":"Design et développement d'un site pour un mariage. Accessible via un QR code sur les invitations. Affichage du déroulé du jour J et informations pratiques",
         "technologies": "PHP - SASS - GSAP",
         "year": "2023",
@@ -27,7 +27,7 @@
     {
         "id": "2",
         "title": "Daily Orsay",
-        "img": "/static/dailyorsay-e90924fcc3c9aace739fdffaee669a8d.png",
+        "img": "dailyorsay",
         "description":"Projet personnel utilisant l'API Images d'Art de la Rmn-Grand Palais. L'idée est de proposer aléatoirement chaque jour un tableau, une scuplture et une photographie faisant partie de la collection du Musée d'Orsay. Refonte du design en 2024",
         "technologies": "PHP - SASS - GSAP",
         "year": "2023-2024",
@@ -40,7 +40,7 @@
     {
         "id": "3",
         "title": "Archipel Contact",
-        "img": "/static/archipelcontact-2cad4919c4fb9590c7ab93d794ffb1b4.png",
+        "img": "archipelcontact",
         "description":"Design et développement de la refonte complète du site Archipel Contact, une agence de voyage B2B, spécialisée dans l'Indonésie. Un back-office sur-mesure permet de mettre à jour les voyages proposés.",
         "technologies": "Symfony - SASS - JS",
         "year": "2021",
@@ -52,7 +52,7 @@
     {
         "id": "4",
         "title": "Les Grands Espaces",
-        "img": "/static/lesgrandsespaces-130fc113e79166740dc3f9a90effc846.png",
+        "img": "lesgrandsespaces",
         "description":"Refonte du site pour une association d'éducation à l'image, en partenariat avec une illustratrice.",
         "technologies": "Wordpress - SASS - JS",
         "year": "2022",
@@ -65,7 +65,7 @@
     {
         "id": "5",
         "title": "ProCATination Game",
-        "img": "/static/procatination-ec970425da42888725b247476067741f.png",
+        "img": "procatination",
         "description":"Un petit jeu pierre-feuille-ciseaux contre un chat, qui décidera si vous avez le droit de procrastiner.",
         "technologies": "React - Material UI",
         "year": "2021",
