@@ -37,7 +37,7 @@
   .links-list {
     height: 100vh;
     padding: 2rem;
-    background: #f4e6d6;
+    background: var(--burgernav-bg);
 
     display: flex;
     flex-direction: column;

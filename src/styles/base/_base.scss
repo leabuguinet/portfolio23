@@ -51,6 +51,8 @@ body {
     --green: #BDD1C5;
     --dark-green: #819688;
 
+    --burgernav-bg: #f4e6d6;
+
     
 //overflow: unset !important;
     color: var(--darkgrey);
@@ -67,7 +69,8 @@ body.dark {
     --darkgrey: #e5b597;
     --nav-hover : #29132a;
     --clouds : #ffffff00;
-    color: #e5b597;
+    
+    --burgernav-bg: #14152b;
 
     --paper: #14152b;
     --projectbox-bg: #14152b;
