@@ -8,7 +8,7 @@ const Mentions = ({ location }) => {
   const pageUrl = location.pathname;
   let homePage = false;
   let footerColor = "#A36361";
-  let footerPadding = "0rem 0"
+  let footerPadding = "1rem 0 0 0"
 
 
   return (

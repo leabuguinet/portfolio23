@@ -126,17 +126,21 @@
           align-items: center;
       }
     }
-
-
 }
 
-.button {
+body.dark .project-button {
+  background-color: var(--about-bg) !important;
+  border: 2px solid var(--darkgrey) !important;
+  color: var(--darkgrey) !important;
+}
+
+.project-button {
     line-height: 1;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: .75rem;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     border-radius: 10rem;
     font-weight: 600;
@@ -148,7 +152,7 @@
     transition: background-color .3s;
 
     font-family: "Cabinet Grotesk", sans-serif;
-        font-size: clampRem(14, 18, $bp-mobile, $bp-regular);
+    font-size: clampRem(14, 18, $bp-mobile, $bp-regular);
   }
   
   .button__icon-wrapper {
@@ -163,13 +167,17 @@
     place-items: center;
     overflow: hidden;
   }
+
+  body.dark .button__icon-wrapper {
+    background-color: var(--darkgrey) !important;
+  }
   
-  .button:hover {
+  .project-button:hover {
     background-color: #000 !important;
     color: white !important;
   }
   
-  .button:hover .button__icon-wrapper {
+  .project-button:hover .button__icon-wrapper {
     color: #000;
   }
 
@@ -182,12 +190,12 @@
     transform: translate(-150%, 150%);
   }
   
-  .button:hover .button__icon-svg:first-child {
+  .project-button:hover .button__icon-svg:first-child {
     transition: transform .3s ease-in-out;
     transform: translate(150%, -150%);
   }
   
-  .button:hover .button__icon-svg--copy {
+  .project-button:hover .button__icon-svg--copy {
     transition: transform .3s ease-in-out .1s;
     transform: translate(0);
   }

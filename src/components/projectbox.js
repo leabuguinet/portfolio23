@@ -70,7 +70,7 @@ export default function ProjectBox({
           </div>
           <div>
             <a
-              className="button"
+              className="project-button"
               target="_blank"
               href={dataProject[index].link}
               style={{
