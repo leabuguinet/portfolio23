@@ -1,5 +1,5 @@
 import React from "react";
-
+import Seo from "../components/seo"
 import { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import Nav from "../components/nav";
@@ -88,6 +88,8 @@ const Portfolio = ({ location }) => {
           <NavBurgerButton />
           <Nav homePage={homePage}></Nav>
 
+          <h1 className="page-title">Portfolio</h1>
+
           <div className="portfolio-content">
             <motion.div
               className="gallery"
@@ -103,6 +105,7 @@ const Portfolio = ({ location }) => {
                   style={{ originX: 0, originZ: 0 }}
                   onClick={() => openModal(index)}
                   index={index}
+         
                 >
                   <motion.img
                     variants={item}
@@ -142,5 +145,7 @@ const Portfolio = ({ location }) => {
     </>
   );
 };
+
+export const Head = () => <Seo title="Portfolio" description="Léa Buguinet - Portfolio - Projets, réalisations et refontes de sites internets" />
 
 export default Portfolio;

@@ -6,7 +6,7 @@ import Nav from "../components/nav"
 import "../styles/main.scss"
 import DarkMode from "../components/darkmodetoggle"
 import Footer from "../components/footer"
-
+import Seo from "../components/seo"
 //import { Head } from "../components/head"
 
 const Index = ({ pageUrl }) => {
@@ -34,6 +34,8 @@ const Index = ({ pageUrl }) => {
     </>
   )
 }
+
+export const Head = () => <Seo title="Accueil" description="Léa Buguinet - Développeuse Web Front-End" />
 
 export default Index
 

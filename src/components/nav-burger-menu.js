@@ -22,6 +22,7 @@ const NavBurgerMenu = ({ rotate }) => {
         className="wrapper-side-menu"
         variants={variants}
         animate={rotate ? "open" : "close"}
+        key={"menu"}
       >
         <div className="links-list">
           <ul>

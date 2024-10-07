@@ -11,11 +11,19 @@ module.exports = {
   siteMetadata: {
     title: "Léa Buguinet",
     description: "Développeuse web Front-End",
+    siteUrl: `https://leabugui.net`,
   },
   plugins: [
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-dark-mode",
     "gatsby-plugin-sass",
     "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/404`, `/mentions` ]
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

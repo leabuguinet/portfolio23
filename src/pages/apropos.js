@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "../components/layout";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-
+import Seo from "../components/seo"
 //import { Head } from "../components/head"
 
 import WordpressLogo from "../assets/svg/wordpress.inline.svg";
@@ -41,6 +41,8 @@ const Apropos = ({ location }) => {
           <NavBurgerButton />
 
           <Nav homePage={homePage}></Nav>
+
+          <h1 className="page-title">À propos</h1>
 
           <div className="about-content">
             <motion.div
@@ -279,5 +281,7 @@ const Apropos = ({ location }) => {
     </>
   );
 };
+
+export const Head = () => <Seo title="À propos" description="Léa Buguinet - CV - Compétences et expériences professionnelles" />
 
 export default Apropos;
